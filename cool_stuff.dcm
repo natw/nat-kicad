@@ -1,0 +1,99 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP +9V
+D Power symbol creates a global label with name "+9V"
+K power-flag
+$ENDCMP
+#
+$CMP -12V
+D Power symbol creates a global label with name "-12V"
+K power-flag
+$ENDCMP
+#
+$CMP -9V
+D Power symbol creates a global label with name "-9V"
+K power-flag
+$ENDCMP
+#
+$CMP 0V
+D Power symbol creates a global label with name "GND" , ground
+K power-flag
+$ENDCMP
+#
+$CMP CD4093
+D Quad 2-Input NAND Schmitt Trigger
+K NAND2
+F http://www.ti.com/lit/ds/symlink/cd4093b.pdf
+$ENDCMP
+#
+$CMP NPN_CBE
+D NPN transistor, collector/base/emitter
+K transistor NPN
+F ~
+$ENDCMP
+#
+$CMP NPN_EBC
+D NPN transistor, emitter/base/collector
+K transistor NPN
+F ~
+$ENDCMP
+#
+$CMP PNP_CBE
+D PNP transistor, collector/base/emitter
+K transistor PNP
+F ~
+$ENDCMP
+#
+$CMP PNP_EBC
+D PNP transistor, emitter/base/collector
+K transistor PNP
+F ~
+$ENDCMP
+#
+$CMP Vcc
+D Power flag
+K power-flag
+$ENDCMP
+#
+$CMP Vee
+D Power symbol creates a global label with name "-12V"
+K power-flag
+$ENDCMP
+#
+$CMP cap_polarized_small
+D Polarized capacitor, small US symbol
+K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP cap_small
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP diode
+D Diode
+K diode
+F ~
+$ENDCMP
+#
+$CMP potentiometer
+D Potentiometer, US symbol
+K resistor variable
+F ~
+$ENDCMP
+#
+$CMP resistor
+D Resistor, US symbol
+K R res resistor
+F ~
+$ENDCMP
+#
+$CMP trimpot
+D Trim-potentiometer, US symbol
+K resistor variable trimpot trimmer
+F ~
+$ENDCMP
+#
+#End Doc Library

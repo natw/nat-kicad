@@ -55,6 +55,11 @@ D Power flag
 K power-flag
 $ENDCMP
 #
+$CMP Vdd
+D Power flag
+K power-flag
+$ENDCMP
+#
 $CMP Vee
 D Power symbol creates a global label with name "-12V"
 K power-flag

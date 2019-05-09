@@ -1,0 +1,15 @@
+[submodule "external/4ms"]
+	path = external/4ms
+	url = git@github.com:4ms/4ms-kicad-lib.git
+[submodule "external/SparkFun-KiCad-Libraries"]
+	path = external/SparkFun-KiCad-Libraries
+	url = git@github.com:sparkfun/SparkFun-KiCad-Libraries.git
+[submodule "external/digikey-kicad-library"]
+	path = external/digikey-kicad-library
+	url = git@github.com:Digi-Key/digikey-kicad-library.git
+[submodule "external/kicad-footprints"]
+	path = external/kicad-footprints
+	url = git@github.com:KiCad/kicad-footprints.git
+[submodule "external/kicad-symbols"]
+	path = external/kicad-symbols
+	url = git@github.com:KiCad/kicad-symbols.git

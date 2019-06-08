@@ -1,8 +1,7 @@
-FOOTPRINT_DIRS=$(shell find . -type d -name *.pretty | grep -vi example)
-SYMBOL_FILES=$(shell find . -type f -name *.lib | grep -vi example)
+FOOTPRINT_DIRS := $(shell find . -type d -name *.pretty | grep -vi example)
+SYMBOL_FILES := $(shell find . -type f -name *.lib | grep -vi example)
 
 default: fp-lib-table sym-lib-table
-	echo $(FOOTPRINT_DIRS)
 
 fp-lib-table: $(FOOTPRINT_DIRS)
 	scripts/build_library.py footprint > $@

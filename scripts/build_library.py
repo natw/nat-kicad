@@ -37,11 +37,17 @@ def format_lib_file(targets, root, lib_type):
 
 
 def find_footprints():
-    return glob.glob("**/*.pretty", recursive=True)
+    def good(path):
+        return ("obsolete" not in path) and ("Example" not in path)
+
+    return filter(good, glob.glob("**/*.pretty", recursive=True))
 
 
 def find_symbols():
-    return glob.glob("**/*.lib", recursive=True)
+    def good(path):
+        return ("obsolete" not in path) and ("Example" not in path)
+
+    return filter(good, glob.glob("**/*.lib", recursive=True))
 
 
 def do_args_stuff():

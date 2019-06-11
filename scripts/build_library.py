@@ -29,7 +29,7 @@ def format_lib_file(targets, root, lib_type):
     def format_lib_line(target):
         abspath = os.path.abspath(target)
         name = os.path.splitext(os.path.basename(target))[0]
-        return f'  (lib (name "{name}")(type "{lib_type}")(uri "{abspath}")(options "")(descr ""))'
+        return f'  (lib (name {name})(type {lib_type})(uri {abspath})(options "")(descr ""))'
 
     return "\n".join(
         itertools.chain([f"({root}"], map(format_lib_line, targets), [")"])
@@ -45,7 +45,11 @@ def find_footprints():
 
 def find_symbols():
     def good(path):
-        return ("obsolete" not in path) and ("Example" not in path)
+        return (
+            ("obsolete" not in path)
+            and ("Example" not in path)
+            and ("Source_Symbol" not in path)
+        )
 
     return filter(good, glob.glob("**/*.lib", recursive=True))
 

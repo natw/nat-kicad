@@ -144,7 +144,6 @@
   (lib (name "GPS")(type "KiCad")(uri "/Users/natwilliams/src/kicad-libraries/external/SparkFun-KiCad-Libraries/Footprints/GPS.pretty")(options "")(descr ""))
   (lib (name "Silicon-Standard")(type "KiCad")(uri "/Users/natwilliams/src/kicad-libraries/external/SparkFun-KiCad-Libraries/Footprints/Silicon-Standard.pretty")(options "")(descr ""))
   (lib (name "Batteries")(type "KiCad")(uri "/Users/natwilliams/src/kicad-libraries/external/SparkFun-KiCad-Libraries/Footprints/Batteries.pretty")(options "")(descr ""))
-  (lib (name "RF")(type "KiCad")(uri "/Users/natwilliams/src/kicad-libraries/external/SparkFun-KiCad-Libraries/Footprints/RF.pretty")(options "")(descr ""))
   (lib (name "Jumpers")(type "KiCad")(uri "/Users/natwilliams/src/kicad-libraries/external/SparkFun-KiCad-Libraries/Footprints/Jumpers.pretty")(options "")(descr ""))
   (lib (name "Resistors")(type "KiCad")(uri "/Users/natwilliams/src/kicad-libraries/external/SparkFun-KiCad-Libraries/Footprints/Resistors.pretty")(options "")(descr ""))
   (lib (name "Boards")(type "KiCad")(uri "/Users/natwilliams/src/kicad-libraries/external/SparkFun-KiCad-Libraries/Footprints/Boards.pretty")(options "")(descr ""))

@@ -13,3 +13,6 @@
 [submodule "external/kicad-symbols"]
 	path = external/kicad-symbols
 	url = git@github.com:KiCad/kicad-symbols.git
+[submodule "plugins/InteractiveHtmlBom"]
+	path = plugins/InteractiveHtmlBom
+	url = git@github.com:openscopeproject/InteractiveHtmlBom.git

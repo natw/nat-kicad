@@ -656,6 +656,29 @@ X A 2 -150 0 100 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# inductor
+#
+DEF inductor L 0 40 N N 1 F N
+F0 "L" 0 -60 50 H V C CNN
+F1 "inductor" 0 65 50 H V C CNN
+F2 "" 0 -10 50 V I C CNN
+F3 "" 0 -10 50 V I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A -75 -10 25 1 -1801 0 1 0 N -50 -10 -100 -10
+A -25 -10 25 1 -1801 0 1 0 N 0 -10 -50 -10
+A 25 -10 25 1 -1801 0 1 0 N 50 -10 0 -10
+A 75 -10 25 1 -1801 0 1 0 N 100 -10 50 -10
+X 1 1 -150 -10 50 R 50 50 1 1 P
+X 2 2 150 -10 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # potentiometer
 #
 DEF potentiometer RV 0 40 Y N 1 F N
@@ -678,6 +701,36 @@ P 5 0 1 0 0 90 40 75 0 60 -40 45 0 30 N
 X 1 1 0 150 50 D 50 50 1 1 P
 X 2 2 150 0 50 L 50 50 1 1 P
 X 3 3 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power-barrel-jack
+#
+DEF power-barrel-jack J 0 40 Y N 1 F N
+F0 "J" -200 -50 50 H V C CNN
+F1 "power-barrel-jack" 0 -250 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *BNC*
+ *SMA*
+ *SMB*
+ *SMC*
+ *Cinch*
+$ENDFPLIST
+DRAW
+A 0 0 50 369 0 0 1 10 N 40 30 50 0
+A 0 0 50 1800 1431 0 1 10 N -50 0 -40 30
+A 0 0 50 -1799 -1 0 1 10 N -50 0 50 0
+C 0 0 20 0 1 8 F
+S 0 -150 0 -50 0 1 0 N
+S 0 50 0 150 0 1 0 N
+S 0 150 100 150 0 1 0 N
+S 100 -150 0 -150 0 1 0 N
+P 2 0 1 0 0 -50 0 -70 N
+P 2 0 1 0 0 50 0 0 N
+X In 1 200 150 100 L 50 50 1 1 P
+X Ext 2 200 -150 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -714,6 +767,29 @@ P 5 0 1 0 -130 0 -115 40 -100 0 -85 -40 -70 0 N
 P 5 0 1 0 -70 0 -55 40 -40 0 -25 -40 -10 0 N
 X ~ 1 -250 0 50 R 50 50 1 1 P
 X ~ 2 50 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# schottky-diode
+#
+DEF schottky-diode D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "schottky-diode" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *SingleDiode
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 -50 50 -50 -50 50 0 -50 50 N
+P 6 0 1 8 75 25 75 50 50 50 50 -50 25 -50 25 -25 N
+X K 1 150 0 100 L 50 50 1 1 P
+X A 2 -150 0 100 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

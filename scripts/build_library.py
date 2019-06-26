@@ -27,9 +27,11 @@ def main():
 
 def format_lib_file(targets, root, lib_type):
     def format_lib_line(target):
-        abspath = os.path.abspath(target)
+        pth = "${CONFIG_CHECKOUT}/" + target
         name = os.path.splitext(os.path.basename(target))[0]
-        return f'  (lib (name {name})(type {lib_type})(uri {abspath})(options "")(descr ""))'
+        return (
+            f'  (lib (name {name})(type {lib_type})(uri {pth})(options "")(descr ""))'
+        )
 
     return "\n".join(
         itertools.chain([f"({root}"], map(format_lib_line, targets), [")"])

@@ -101,9 +101,21 @@ K diode
 F ~
 $ENDCMP
 #
+$CMP inductor
+D Inductor
+K inductor choke coil reactor magnetic
+F ~
+$ENDCMP
+#
 $CMP potentiometer
 D Potentiometer, US symbol
 K resistor variable
+F ~
+$ENDCMP
+#
+$CMP power-barrel-jack
+D coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)
+K BNC SMA SMB SMC coaxial connector CINCH RCA
 F ~
 $ENDCMP
 #

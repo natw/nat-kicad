@@ -16,3 +16,6 @@
 [submodule "plugins/InteractiveHtmlBom"]
 	path = plugins/InteractiveHtmlBom
 	url = git@github.com:openscopeproject/InteractiveHtmlBom.git
+[submodule "plugins/HierPlace"]
+	path = plugins/HierPlace
+	url = git@github.com:xesscorp/HierPlace.git

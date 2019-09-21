@@ -401,4 +401,7 @@
   (lib (name EtherkitKicadLibrary)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/4ms/lib-sch/EtherkitKicadLibrary.lib)(options "")(descr ""))
   (lib (name 4ms-power)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/4ms/lib-sch/4ms-power.lib)(options "")(descr ""))
   (lib (name AudioBoardLib)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/4ms/lib-sch/AudioBoardLib.lib)(options "")(descr ""))
+  (lib (name 4ms-vreg)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/4ms/lib-sch/4ms-vreg.lib)(options "")(descr ""))
+  (lib (name uc_power_5V-cache)(type Legacy)(uri "${CONFIG_CHECKOUT}/external/4ms/schematic blocks/uc_power_5V-cache.lib")(options "")(descr ""))
+  (lib (name audio-codec-wm8731-cache)(type Legacy)(uri "${CONFIG_CHECKOUT}/external/4ms/schematic blocks/audio-codec-wm8731-cache.lib")(options "")(descr ""))
 )

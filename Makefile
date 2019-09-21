@@ -9,12 +9,16 @@ fp-lib-table: $(FOOTPRINT_DIRS) scripts/build_library.py
 sym-lib-table: $(SYMBOL_FILES) scripts/build_library.py
 	scripts/build_library.py symbol > $@
 
-$(FOOTPRINT_DIRS):
-	git submodule update --recursive
 
-$(SYMBOL_FILES):
-	git submodule update --recursive
+$(FOOTPRINT_DIRS): update
+
+$(SYMBOL_FILES): update
 
 clean:
 	rm fp-lib-table
 	rm sym-lib-table
+
+update:
+	git submodule update --recursive --remote
+
+.PHONY: update

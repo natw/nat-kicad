@@ -7,73 +7,11 @@ import re
 import os.path
 import glob
 import sys
+from typing import List
 
 
-def main():
-    args = do_args_stuff()
-
-    table: List[TableEntry] = parse_existing_table(args.table)
-
-    if args.kind == "footprint":
-        target_list = find_footprints()
-        lib_type = "KiCad"
-        root = "fp_lib_table"
-    elif args.kind == "symbol":
-        target_list = find_symbols()
-        lib_type = "Legacy"
-        root = "sym_lib_table"
-    else:
-        print("wut")
-        sys.exit(1)
-
-    print(reconcile_tables(table, target_list, root, lib_type))
-
-
-def parse_existing_table(path):
-    pass
-
-
-def reconcile_tables(table, targets, root, lib_type):
-    def format_lib_line(target):
-        pth = "${CONFIG_CHECKOUT}/" + target
-        name = os.path.splitext(os.path.basename(target))[0]
-        return (
-            f'  (lib (name {name})(type {lib_type})(uri {pth})(options "")(descr ""))'
-        )
-
-    return "\n".join(
-        itertools.chain([f"({root}"], map(format_lib_line, targets), [")"])
-    )
-
-
-def find_footprints():
-    def good(path):
-        return (
-            ("obsolete" not in path)
-            and ("Example" not in path)
-            and ("src/" not in path)
-        )
-
-    return filter(good, glob.glob("**/*.pretty", recursive=True))
-
-
-def find_symbols():
-    def good(path):
-        return (
-            ("obsolete" not in path)
-            and ("Example" not in path)
-            and ("src/" not in path)
-        )
-
-    return filter(good, glob.glob("**/*.lib", recursive=True))
-
-
-def do_args_stuff():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("kind")
-    # path to existing library table file
-    parser.add_argument("table")
-    return parser.parse_args()
+FOOTPRINT_BLACKLIST = ["4ms-footprints", "obsolete", "Example", "src/"]
+SYMBOL_BLACKLIST = ["obsolete", "Example", "src/"]
 
 
 @dataclass(order=False)
@@ -102,7 +40,7 @@ class TableEntry:
             attrs["options"] = '""'
         if not attrs["descr"]:
             attrs["descr"] = '""'
-        print(attrs)
+        # print(attrs)
         return TableEntry(**attrs)
 
     def to_line(self):
@@ -110,7 +48,7 @@ class TableEntry:
         if self.disabled:
             dis = "(disabled)"
         return (
-            f"(lib "
+            f"  (lib "
             f"(name {self.name})"
             f"(type {self._type})"
             f"(uri {self.uri})"
@@ -120,13 +58,94 @@ class TableEntry:
         )
 
 
+def main():
+    args = do_args_stuff()
+
+    if args.kind == "footprint":
+        target_list = find_footprints()
+        lib_type = "KiCad"
+        # root = "fp_lib_table"
+    elif args.kind == "symbol":
+        target_list = find_symbols()
+        lib_type = "Legacy"
+        # root = "sym_lib_table"
+    else:
+        print("wut")
+        sys.exit(1)
+
+    existing: List[TableEntry] = list(parse_existing_table(args.table))
+    new_ones: List[TableEntry] = repo_entries(target_list, lib_type)
+    libs = merge_tables(existing, new_ones)
+
+    print("(" + "\n ".join(te.to_line() for te in existing) + "\n)")
+    # print(reconcile_tables(table, target_list, root, lib_type))
+
+
+def merge_tables(existing, from_repos):
+    existing_names = [l.name for l in existing]
+    ex = list(existing)
+    for lib in from_repos:
+        if lib.name not in existing_names:
+            ex.append(lib)
+    return ex
+
+
+def repo_entries(paths, lib_type):
+    for path in paths:
+        uri = "${CONFIG_CHECKOUT}/" + path
+        name = os.path.splitext(os.path.basename(path))[0]
+        yield TableEntry(name=name, _type=lib_type, uri=uri, options='""', descr='""')
+
+
+def parse_existing_table(path: str) -> List[TableEntry]:
+    with open(path, "r") as table_file:
+        for line in table_file.readlines()[1:-1]:
+            entry = TableEntry.from_line(line)
+            if entry:
+                yield entry
+
+
+def reconcile_tables(table: str, targets, root, lib_type):
+    def format_lib_line(target):
+        pth = "${CONFIG_CHECKOUT}/" + target
+        name = os.path.splitext(os.path.basename(target))[0]
+        return (
+            f'  (lib (name {name})(type {lib_type})(uri {pth})(options "")(descr ""))'
+        )
+
+    return "\n".join(
+        itertools.chain([f"({root}"], map(format_lib_line, targets), [")"])
+    )
+
+
+def find_footprints():
+    def good(path):
+        return not any(ble in path for ble in FOOTPRINT_BLACKLIST)
+
+    return filter(good, glob.glob("**/*.pretty", recursive=True))
+
+
+def find_symbols():
+    def good(path):
+        return not any(ble in path for ble in SYMBOL_BLACKLIST)
+
+    return filter(good, glob.glob("**/*.lib", recursive=True))
+
+
+def do_args_stuff():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("kind")
+    # path to existing library table file
+    parser.add_argument("table")
+    return parser.parse_args()
+
+
 # just stolen from rosettacode
 
 SEXP_TERM_REGEX = r"""(?mx)
     \s*(?:
         (?P<brackl>\()|
         (?P<brackr>\))|
-        (?P<num>\-?\d+\.\d+|\-?\d+)|
         (?P<sq>"[^"]*")|
         (?P<s>[^(^)\s]+)
        )"""

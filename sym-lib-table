@@ -1,7 +1,7 @@
 (sym_lib_table
   (lib (name 4021)(type Legacy)(uri ${CONFIG_CHECKOUT}/symbols/4021.lib)(options "")(descr ""))
   (lib (name 00-cool_stuff)(type Legacy)(uri ${CONFIG_CHECKOUT}/symbols/00-cool_stuff.lib)(options "")(descr ""))
-  (lib (name FPGA_Xilinx_Virtex6)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/kicad-symbols/FPGA_Xilinx_Virtex6.lib)(options "")(descr ""))
+  (lib (name FPGA_Xilinx_Virtex6)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/kicad-symbols/FPGA_Xilinx_Virtex6.lib)(options "")(descr "")(disabled))
   (lib (name MCU_Espressif)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/kicad-symbols/MCU_Espressif.lib)(options "")(descr ""))
   (lib (name Driver_Relay)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/kicad-symbols/Driver_Relay.lib)(options "")(descr ""))
   (lib (name RF_Switch)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/kicad-symbols/RF_Switch.lib)(options "")(descr ""))

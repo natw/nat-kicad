@@ -4,10 +4,12 @@ SYMBOL_FILES := $(shell find . -type f -name *.lib | grep -vi example)
 default: fp-lib-table sym-lib-table
 
 fp-lib-table: $(FOOTPRINT_DIRS) scripts/build_library.py
-	scripts/build_library.py footprint $@ > $@
+	scripts/build_library.py footprint $@ > /tmp/fp-lib
+	cp /tmp/fp-lib $@
 
 sym-lib-table: $(SYMBOL_FILES) scripts/build_library.py
-	scripts/build_library.py symbol $@ > $@
+	scripts/build_library.py symbol $@ > /tmp/sym-lib
+	cp /tmp/sym-lib $@
 
 
 $(FOOTPRINT_DIRS): update
@@ -21,4 +23,4 @@ clean:
 update:
 	git submodule update --recursive --remote
 
-.PHONY: update
+.PHONY: update clean

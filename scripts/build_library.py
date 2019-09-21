@@ -14,6 +14,13 @@ FOOTPRINT_BLACKLIST = ["4ms-footprints", "obsolete", "Example", "src/"]
 SYMBOL_BLACKLIST = ["obsolete", "Example", "src/"]
 
 
+def escape(thing):
+    """make strings suitable for sexps"""
+    if " " in thing:
+        thing = '"' + thing + '"'
+    return thing
+
+
 @dataclass(order=False)
 class TableEntry:
     name: str
@@ -48,10 +55,10 @@ class TableEntry:
         if self.disabled:
             dis = "(disabled)"
         return (
-            f"  (lib "
+            f"(lib "
             f"(name {self.name})"
             f"(type {self._type})"
-            f"(uri {self.uri})"
+            f"(uri {escape(self.uri)})"
             f"(options {self.options})"
             f"(descr {self.descr})"
             f"{dis})"
@@ -64,11 +71,11 @@ def main():
     if args.kind == "footprint":
         target_list = find_footprints()
         lib_type = "KiCad"
-        # root = "fp_lib_table"
+        root = "fp_lib_table"
     elif args.kind == "symbol":
         target_list = find_symbols()
         lib_type = "Legacy"
-        # root = "sym_lib_table"
+        root = "sym_lib_table"
     else:
         print("wut")
         sys.exit(1)
@@ -77,8 +84,7 @@ def main():
     new_ones: List[TableEntry] = repo_entries(target_list, lib_type)
     libs = merge_tables(existing, new_ones)
 
-    print("(" + "\n ".join(te.to_line() for te in existing) + "\n)")
-    # print(reconcile_tables(table, target_list, root, lib_type))
+    print(f"({root}\n  " + "\n  ".join(te.to_line() for te in libs) + "\n)")
 
 
 def merge_tables(existing, from_repos):
@@ -100,9 +106,10 @@ def repo_entries(paths, lib_type):
 def parse_existing_table(path: str) -> List[TableEntry]:
     with open(path, "r") as table_file:
         for line in table_file.readlines()[1:-1]:
-            entry = TableEntry.from_line(line)
-            if entry:
-                yield entry
+            if not line.strip().startswith("#"):
+                entry = TableEntry.from_line(line)
+                if entry:
+                    yield entry
 
 
 def reconcile_tables(table: str, targets, root, lib_type):

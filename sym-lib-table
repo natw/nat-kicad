@@ -404,4 +404,7 @@
   (lib (name 4ms-vreg)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/4ms/lib-sch/4ms-vreg.lib)(options "")(descr ""))
   (lib (name uc_power_5V-cache)(type Legacy)(uri "${CONFIG_CHECKOUT}/external/4ms/schematic blocks/uc_power_5V-cache.lib")(options "")(descr ""))
   (lib (name audio-codec-wm8731-cache)(type Legacy)(uri "${CONFIG_CHECKOUT}/external/4ms/schematic blocks/audio-codec-wm8731-cache.lib")(options "")(descr ""))
+  (lib (name MCU_Texas_SimpleLink)(type Legacy)(uri ${CONFIG_CHECKOUT}/external/kicad-symbols/MCU_Texas_SimpleLink.lib)(options "")(descr ""))
+  (lib (name audio-codec-cs4271-cache)(type Legacy)(uri "${CONFIG_CHECKOUT}/external/4ms/schematic blocks/audio-codec-cs4271-cache.lib")(options "")(descr ""))
+  (lib (name audio-codec-WM8731-rescue)(type Legacy)(uri "${CONFIG_CHECKOUT}/external/4ms/schematic blocks/audio-codec-WM8731-rescue.lib")(options "")(descr ""))
 )

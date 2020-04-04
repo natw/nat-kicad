@@ -1,5 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP +4.5V
+D Power symbol creates a global label with name "+9V"
+K power-flag
+$ENDCMP
+#
 $CMP +9V
 D Power symbol creates a global label with name "+9V"
 K power-flag
@@ -44,6 +49,11 @@ K operational transconductance amplifier OTA
 F http://www.ti.com/lit/ds/symlink/lm13700.pdf
 $ENDCMP
 #
+$CMP N-Channel_MOSFET
+D n channel mosfet
+K N-Channel MOSFET Logic-Level nchannel
+$ENDCMP
+#
 $CMP NPN_CBE
 D NPN transistor, collector/base/emitter
 K transistor NPN
@@ -53,6 +63,11 @@ $ENDCMP
 $CMP NPN_EBC
 D NPN transistor, emitter/base/collector
 K transistor NPN
+F ~
+$ENDCMP
+#
+$CMP NPN_Transistor
+K transistor NPN npntransistor
 F ~
 $ENDCMP
 #
@@ -68,10 +83,28 @@ K transistor PNP
 F ~
 $ENDCMP
 #
+$CMP PNP_Transistor
+D PNP transistor
+K transistor PNP pnptransistor
+F ~
+$ENDCMP
+#
 $CMP Rotary_2x6
 D 2 rotary switch with 6 positions
 K rotary switch
 F http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf
+$ENDCMP
+#
+$CMP TP0610L
+D -60V Vds, -0.18A Id, P-Channel MOSFET, TO-92
+K P-Channel MOSFET
+F http://www.vishay.com/docs/70209/70209.pdf
+$ENDCMP
+#
+$CMP VP0610L
+D -60V Vds, -0.18A Id, P-Channel MOSFET, TO-92
+K P-Channel MOSFET
+F http://www.vishay.com/docs/70209/70209.pdf
 $ENDCMP
 #
 $CMP Vcc
@@ -96,7 +129,7 @@ F ~
 $ENDCMP
 #
 $CMP cap_small
-D Unpolarized capacitor, small symbol
+D Unpolarized capacitor, small symbol, cap
 K capacitor cap
 F ~
 $ENDCMP
@@ -107,6 +140,12 @@ K diode
 F ~
 $ENDCMP
 #
+$CMP diode2
+D DIODE GEN PURP 100V 300MA SOD123
+K 1N4148W-FDICT-ND
+F https://www.diodes.com/assets/Datasheets/ds30086.pdf
+$ENDCMP
+#
 $CMP inductor
 D Inductor
 K inductor choke coil reactor magnetic
@@ -115,7 +154,7 @@ $ENDCMP
 #
 $CMP potentiometer
 D Potentiometer, US symbol
-K resistor variable
+K resistor variable pot
 F ~
 $ENDCMP
 #
@@ -128,6 +167,12 @@ $ENDCMP
 $CMP resistor
 D Resistor, US symbol
 K R res resistor
+F ~
+$ENDCMP
+#
+$CMP switch-spdt
+D Switch, single pole double throw
+K switch single-pole double-throw spdt ON-ON
 F ~
 $ENDCMP
 #

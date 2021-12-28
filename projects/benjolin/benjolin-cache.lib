@@ -1,0 +1,480 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# 00-cool_stuff_0V
+#
+DEF 00-cool_stuff_0V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "00-cool_stuff_0V" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_78L0X
+#
+DEF 00-cool_stuff_78L0X U 0 10 Y Y 1 F N
+F0 "U" -150 125 50 H V C CNN
+F1 "00-cool_stuff_78L0X" 0 125 50 H V L CNN
+F2 "00-Mine:TO-92_HandSolder" 0 225 50 H I C CIN
+F3 "" 0 -50 50 H I C CNN
+$FPLIST
+ TO?92*
+$ENDFPLIST
+DRAW
+S -200 -200 200 75 0 1 10 f
+X VO 1 300 0 100 L 50 50 1 1 w
+X GND 2 0 -300 100 U 50 50 1 1 W
+X VI 3 -300 0 100 R 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_79L0X
+#
+DEF 00-cool_stuff_79L0X U 0 10 Y Y 1 F N
+F0 "U" -150 -125 50 H V C CNN
+F1 "00-cool_stuff_79L0X" 0 -125 50 H V L CNN
+F2 "00-Mine:TO-92_HandSolder" 0 -200 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO?92*
+$ENDFPLIST
+DRAW
+S -200 200 200 -75 0 1 10 f
+X GND 1 0 300 100 D 50 50 1 1 W
+X VI 2 -300 0 100 R 50 50 1 1 W
+X VO 3 300 0 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_NPN_CBE
+#
+DEF 00-cool_stuff_NPN_CBE Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "00-cool_stuff_NPN_CBE" 200 -50 50 H V L CNN
+F2 "00-Mine:TO-92_HandSolder" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
+X C 1 100 200 100 D 50 50 1 1 P
+X B 2 -200 0 225 R 50 50 1 1 I
+X E 3 100 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_TL072-separate
+#
+DEF 00-cool_stuff_TL072-separate U 0 4 Y Y 3 L N
+F0 "U" 0 200 50 H V L CNN
+F1 "00-cool_stuff_TL072-separate" 0 -200 50 H V L CNN
+F2 "00-Mine:DIP-8" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS TL082-sep NJM2068-sep
+$FPLIST
+ SOIC*Pitch1.27mm*
+ DIP*W7.62mm*
+ TSSOP*Pitch0.65mm*
+ TO-99*
+ DSBGA*
+$ENDFPLIST
+DRAW
+P 4 0 1 10 -200 200 200 0 -200 -200 -200 200 f
+X ~ 1 300 0 100 L 50 50 1 1 O
+X - 2 -300 100 100 R 50 50 1 1 I
+X + 3 -300 -100 100 R 50 50 1 1 I
+X + 5 -300 -100 100 R 50 50 2 1 I
+X - 6 -300 100 100 R 50 50 2 1 I
+X ~ 7 300 0 100 L 50 50 2 1 O
+X V- 4 -100 -250 100 U 50 50 3 1 W
+X V+ 8 -100 250 100 D 50 50 3 1 W
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_TL074-f-separate
+#
+DEF 00-cool_stuff_TL074-f-separate U 0 4 Y Y 5 L N
+F0 "U" 50 150 50 H V L CNN
+F1 "00-cool_stuff_TL074-f-separate" 50 -150 50 H V L CNN
+F2 "00-Mine:DIP-14" -50 100 50 H I C CNN
+F3 "" 50 200 50 H I C CNN
+$FPLIST
+ SOIC*Pitch1.27mm*
+ DIP*W7.62mm*
+ TSSOP*4.4x5mm*Pitch0.65mm*
+ SSOP*
+ MSOP*
+$ENDFPLIST
+DRAW
+P 4 0 1 10 -200 200 200 0 -200 -200 -200 200 f
+X ~ 1 300 0 100 L 50 50 1 1 O
+X - 2 -300 100 100 R 50 50 1 1 I
+X + 3 -300 -100 100 R 50 50 1 1 I
+X + 5 -300 -100 100 R 50 50 2 1 I
+X - 6 -300 100 100 R 50 50 2 1 I
+X ~ 7 300 0 100 L 50 50 2 1 O
+X + 10 -300 -100 100 R 50 50 3 1 I
+X ~ 8 300 0 100 L 50 50 3 1 O
+X - 9 -300 100 100 R 50 50 3 1 I
+X + 12 -300 -100 100 R 50 50 4 1 I
+X - 13 -300 100 100 R 50 50 4 1 I
+X ~ 14 300 0 100 L 50 50 4 1 O
+X V- 11 -100 -300 150 U 50 50 5 1 W
+X V+ 4 -100 300 150 D 50 50 5 1 W
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_Vcc
+#
+DEF 00-cool_stuff_Vcc #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "00-cool_stuff_Vcc" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X Vcc 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_Vee
+#
+DEF 00-cool_stuff_Vee #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 100 50 H I C CNN
+F1 "00-cool_stuff_Vee" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 30 50 0 100 -30 50 0 50 F
+X Vee 1 0 0 0 U 50 50 0 0 W N
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_cap_polarized_small
+#
+DEF 00-cool_stuff_cap_polarized_small C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "00-cool_stuff_cap_polarized_small" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ CP_*
+$ENDFPLIST
+DRAW
+A 0 -140 125 1186 614 0 1 12 N -60 -30 60 -30
+P 2 0 1 12 -60 20 60 20 N
+P 2 0 1 0 -50 60 -30 60 N
+P 2 0 1 0 -40 50 -40 70 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_cap_small
+#
+DEF 00-cool_stuff_cap_small C 0 10 N N 1 F N
+F0 "C" -50 100 50 H V L CNN
+F1 "00-cool_stuff_cap_small" -150 -100 50 H V L CNN
+F2 "00-Mine:capacitor-TH-2.54mm_5mm" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 12 -20 -60 -20 60 N
+P 2 0 1 13 20 -60 20 60 N
+X ~ 1 -100 0 80 R 50 50 1 1 P
+X ~ 2 100 0 80 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_diode
+#
+DEF 00-cool_stuff_diode D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "00-cool_stuff_diode" 0 -100 50 H V C CNN
+F2 "00-Mine:diode-TH" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 -50 0 50 0 N
+P 2 0 1 8 50 -50 50 50 N
+P 4 0 1 8 -50 -50 -50 50 50 0 -50 -50 N
+X K 1 150 0 100 L 50 50 1 1 P
+X A 2 -150 0 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_potentiometer
+#
+DEF 00-cool_stuff_potentiometer RV 0 40 Y N 1 F N
+F0 "RV" -175 0 50 V V C CNN
+F1 "00-cool_stuff_potentiometer" -100 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "Pot Label" 450 0 50 V V C CNN "Label"
+$FPLIST
+ Potentiometer*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 0 -90 0 -100 N
+P 2 0 1 0 0 100 0 90 N
+P 2 0 1 0 100 0 60 0 N
+P 4 0 1 0 45 0 90 20 90 -20 45 0 F
+P 5 0 1 0 0 -30 40 -45 0 -60 -40 -75 0 -90 N
+P 5 0 1 0 0 30 40 15 0 0 -40 -15 0 -30 N
+P 5 0 1 0 0 90 40 75 0 60 -40 45 0 30 N
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
+X 3 3 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_resistor
+#
+DEF 00-cool_stuff_resistor R 0 0 N Y 1 F N
+F0 "R" -100 100 50 H V C CNN
+F1 "00-cool_stuff_resistor" -100 -100 50 H V C CNN
+F2 "00-Mine:resistor-TH-10mm" -90 40 50 H I C CNN
+F3 "" -100 0 50 V I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 -190 0 -200 0 N
+P 2 0 1 0 -10 0 0 0 N
+P 5 0 1 0 -190 0 -175 40 -160 0 -145 -40 -130 0 N
+P 5 0 1 0 -130 0 -115 40 -100 0 -85 -40 -70 0 N
+P 5 0 1 0 -70 0 -55 40 -40 0 -25 -40 -10 0 N
+X ~ 1 -250 0 50 R 50 50 1 1 P
+X ~ 2 50 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 4021_4021
+#
+DEF 4021_4021 U 0 40 Y Y 1 F N
+F0 "U" -200 650 60 H V L CNN
+F1 "4021_4021" -200 -1150 60 H V L CNN
+F2 "" 200 -100 60 H V C CNN
+F3 "" 200 -100 60 H V C CNN
+DRAW
+S -200 600 300 -1100 0 1 0 N
+X D7 1 -400 -400 200 R 50 50 1 1 I
+X CLK 10 -400 -700 200 R 50 50 1 1 I
+X DS 11 -400 -600 200 R 50 50 1 1 I
+X Q6 12 500 200 200 L 50 50 1 1 O
+X D4 13 -400 -100 200 R 50 50 1 1 I
+X D5 14 -400 -200 200 R 50 50 1 1 I
+X D6 15 -400 -300 200 R 50 50 1 1 I
+X VDD 16 -400 500 200 R 50 50 1 1 W
+X Q5 2 500 300 200 L 50 50 1 1 O
+X Q7 3 500 100 200 L 50 50 1 1 O
+X D3 4 -400 0 200 R 50 50 1 1 I
+X D2 5 -400 100 200 R 50 50 1 1 I
+X D1 6 -400 200 200 R 50 50 1 1 I
+X D0 7 -400 300 200 R 50 50 1 1 I
+X GND 8 -400 -1000 200 R 50 50 1 1 W
+X PL 9 -400 -800 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# 4ms-ic_V2164
+#
+DEF 4ms-ic_V2164 U 0 20 Y Y 4 F N
+F0 "U" 50 200 60 H V L CNN
+F1 "4ms-ic_V2164" -190 20 60 H V L CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+ALIAS SSM2164
+$FPLIST
+ DIP14
+ SOIC14
+ *SOIC*
+ *DIP*
+$ENDFPLIST
+DRAW
+S -200 200 -300 -200 0 1 0 f
+P 2 0 1 0 -300 -200 -200 200 N
+P 2 0 1 0 -300 200 -200 -200 N
+P 2 0 1 0 -250 -200 -250 -250 N
+P 4 0 1 6 -200 200 200 0 -200 -200 -200 200 f
+X ~ 1 0 200 100 D 20 20 1 1 W
+X V+ 16 -100 250 100 D 20 20 1 1 W
+X ~ 2 -500 0 200 R 40 40 1 1 I
+X ~ 3 -500 -250 250 R 40 40 1 1 I
+X ~ 4 400 0 200 L 40 40 1 1 O
+X GND 8 0 -250 150 U 20 20 1 1 W
+X V- 9 -100 -250 100 U 20 20 1 1 W
+X ~ 5 400 0 200 L 40 40 2 1 O
+X ~ 6 -500 -250 250 R 40 40 2 1 I
+X ~ 7 -500 0 200 R 40 40 2 1 I
+X ~ 10 -500 0 200 R 40 40 3 1 I
+X ~ 11 -500 -250 250 R 40 40 3 1 I
+X ~ 12 400 0 200 L 40 40 3 1 O
+X ~ 13 400 0 200 L 40 40 4 1 O
+X ~ 14 -500 -250 250 R 40 40 4 1 I
+X ~ 15 -500 0 200 R 40 40 4 1 I
+ENDDRAW
+ENDDEF
+#
+# Device_C_Small
+#
+DEF Device_C_Small C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "Device_C_Small" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R_US
+#
+DEF Device_R_US R 0 0 N Y 1 F N
+F0 "R" 100 0 50 V V C CNN
+F1 "Device_R_US" -100 0 50 V V C CNN
+F2 "" 40 -10 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 0 -90 0 -100 N
+P 2 0 1 0 0 90 0 100 N
+P 5 0 1 0 0 -30 40 -45 0 -60 -40 -75 0 -90 N
+P 5 0 1 0 0 30 40 15 0 0 -40 -15 0 -30 N
+P 5 0 1 0 0 90 40 75 0 60 -40 45 0 30 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Switch_SW_SPDT
+#
+DEF Switch_SW_SPDT SW 0 0 Y N 1 F N
+F0 "SW" 0 170 50 H V C CNN
+F1 "Switch_SW_SPDT" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C -80 0 20 0 0 0 N
+C 80 -100 20 0 0 0 N
+C 80 100 20 0 1 0 N
+P 2 0 1 0 -60 10 65 90 N
+X A 1 200 100 100 L 50 50 1 1 P
+X B 2 -200 0 100 R 50 50 1 1 P
+X C 3 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# dk_Banana-and-Tip-Connectors-Jacks-Plugs_105-1103-001
+#
+DEF dk_Banana-and-Tip-Connectors-Jacks-Plugs_105-1103-001 J 0 40 N N 1 F N
+F0 "J" -50 50 50 H V R CNN
+F1 "dk_Banana-and-Tip-Connectors-Jacks-Plugs_105-1103-001" 50 -100 50 H V L CNN
+F2 "digikey-footprints:Test_Jack_Horiz" 200 200 60 H I L CNN
+F3 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" 200 300 60 H I L CNN
+F4 "J577-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "105-1103-001" 200 500 60 H I L CNN "MPN"
+F6 "Connectors, Interconnects" 200 600 60 H I L CNN "Category"
+F7 "Banana and Tip Connectors - Jacks, Plugs" 200 700 60 H I L CNN "Family"
+F8 "https://belfuse.com/resources/Johnson/drawings/dr-1051101001.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/cinch-connectivity-solutions-johnson/105-1103-001/J577-ND/241122" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "CONN TIP JACK SOLDER BLACK" 200 1000 60 H I L CNN "Description"
+F11 "Cinch Connectivity Solutions Johnson" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+C 0 0 25 1 1 0 N
+C 0 0 50 1 1 0 N
+X ~ 1 0 -150 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power1-rescue_power-barrel-jack-00-cool_stuff
+#
+DEF power1-rescue_power-barrel-jack-00-cool_stuff J 0 40 Y N 1 F N
+F0 "J" -200 -50 50 H V C CNN
+F1 "power1-rescue_power-barrel-jack-00-cool_stuff" 0 -250 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *BNC*
+ *SMA*
+ *SMB*
+ *SMC*
+ *Cinch*
+$ENDFPLIST
+DRAW
+A 0 0 50 369 0 0 1 10 N 40 30 50 0
+A 0 0 50 1800 1431 0 1 10 N -50 0 -40 30
+A 0 0 50 -1799 -1 0 1 10 N -50 0 50 0
+C 0 0 20 0 1 8 F
+S 0 -150 0 -50 0 1 0 N
+S 0 50 0 150 0 1 0 N
+S 0 150 100 150 0 1 0 N
+S 100 -150 0 -150 0 1 0 N
+P 2 0 1 0 0 -50 0 -70 N
+P 2 0 1 0 0 50 0 0 N
+X In 1 200 150 100 L 50 50 1 1 P
+X Ext 2 200 -150 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power1-rescue_schottky-diode-00-cool_stuff
+#
+DEF power1-rescue_schottky-diode-00-cool_stuff D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "power1-rescue_schottky-diode-00-cool_stuff" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *SingleDiode
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 -50 50 -50 -50 50 0 -50 50 N
+P 6 0 1 8 75 25 75 50 50 50 50 -50 25 -50 25 -25 N
+X K 1 150 0 100 L 50 50 1 1 P
+X A 2 -150 0 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_PWR_FLAG
+#
+DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "power_PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,429 @@
+EESchema Schematic File Version 4
+LIBS:benjolin-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 1200 1750 0    50   Input ~ 0
+AUDIO_IN
+$Comp
+L 00-cool_stuff:potentiometer RV12
+U 1 1 5D0E0D21
+P 1950 2100
+F 0 "RV12" H 1882 2191 50  0000 R CNN
+F 1 "10kA" H 1882 2100 50  0000 R CNN
+F 2 "Connectors:1X03_LOCK_LONGPADS" H 1950 2100 50  0001 C CNN
+F 3 "~" H 1950 2100 50  0001 C CNN
+F 4 "volume" H 1882 2009 50  0000 R CNN "Label"
+	1    1950 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0110
+U 1 1 5D0E4952
+P 1950 2350
+F 0 "#PWR0110" H 1950 2100 50  0001 C CNN
+F 1 "0V" H 1955 2177 50  0000 C CNN
+F 2 "" H 1950 2350 50  0001 C CNN
+F 3 "" H 1950 2350 50  0001 C CNN
+	1    1950 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2350 1950 2250
+Wire Wire Line
+	2100 2100 2400 2100
+$Comp
+L Amplifier_Operational:NJM4556A U11
+U 2 1 5D1245A1
+P 3900 2900
+F 0 "U11" H 3900 3267 50  0000 C CNN
+F 1 "NJM4556A" H 3900 3176 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 3900 2900 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM4556A_E.pdf" H 3900 2900 50  0001 C CNN
+	2    3900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NJM4556A U11
+U 3 1 5D12CAC1
+P 5600 1600
+F 0 "U11" H 5558 1646 50  0000 L CNN
+F 1 "NJM4556A" H 5558 1555 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 5600 1600 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM4556A_E.pdf" H 5600 1600 50  0001 C CNN
+	3    5600 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R56
+U 1 1 5D13D8C0
+P 4550 2900
+F 0 "R56" H 4450 3105 50  0000 C CNN
+F 1 "1R" H 4450 3014 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4460 2940 50  0001 C CNN
+F 3 "~" V 4450 2900 50  0001 C CNN
+	1    4550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2900 4200 2900
+$Comp
+L 00-cool_stuff:resistor R55
+U 1 1 5D146940
+P 4550 1650
+F 0 "R55" H 4450 1855 50  0000 C CNN
+F 1 "1R" H 4450 1764 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4460 1690 50  0001 C CNN
+F 3 "~" V 4450 1650 50  0001 C CNN
+	1    4550 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 1650 4200 1650
+$Comp
+L 00-cool_stuff:Vcc #PWR0111
+U 1 1 5D15B790
+P 5500 1300
+F 0 "#PWR0111" H 5500 1150 50  0001 C CNN
+F 1 "Vcc" H 5515 1473 50  0000 C CNN
+F 2 "" H 5500 1300 50  0001 C CNN
+F 3 "" H 5500 1300 50  0001 C CNN
+	1    5500 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:Vee #PWR0112
+U 1 1 5D15E96E
+P 5500 1900
+F 0 "#PWR0112" H 5500 2000 50  0001 C CNN
+F 1 "Vee" H 5515 2073 50  0000 C CNN
+F 2 "" H 5500 1900 50  0001 C CNN
+F 3 "" H 5500 1900 50  0001 C CNN
+	1    5500 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 3000 3600 3150
+Wire Wire Line
+	3600 3150 4200 3150
+Wire Wire Line
+	4200 3150 4200 2900
+Connection ~ 4200 2900
+Wire Wire Line
+	3600 1750 3600 1900
+Wire Wire Line
+	3600 1900 4200 1900
+Wire Wire Line
+	4200 1900 4200 1650
+Connection ~ 4200 1650
+$Comp
+L 00-cool_stuff:cap_small C20
+U 1 1 5D17E5C6
+P 3150 2800
+F 0 "C20" H 3150 3029 50  0000 C CNN
+F 1 "2n2" H 3150 2938 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 3150 2800 50  0001 C CNN
+F 3 "~" V 3150 2800 50  0001 C CNN
+	1    3150 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2800 3400 2800
+$Comp
+L 00-cool_stuff:cap_small C19
+U 1 1 5D1818E8
+P 3150 1550
+F 0 "C19" H 3150 1779 50  0000 C CNN
+F 1 "2n2" H 3150 1688 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 3150 1550 50  0001 C CNN
+F 3 "~" V 3150 1550 50  0001 C CNN
+	1    3150 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1550 3400 1550
+$Comp
+L 00-cool_stuff:resistor R52
+U 1 1 5D187F25
+P 3400 1900
+F 0 "R52" V 3254 1833 50  0000 R CNN
+F 1 "40k2" V 3345 1833 50  0000 R CNN
+F 2 "00-Mine:resistor-TH-10mm" H 3310 1940 50  0001 C CNN
+F 3 "~" V 3300 1900 50  0001 C CNN
+	1    3400 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 1650 3400 1550
+Connection ~ 3400 1550
+Wire Wire Line
+	3400 1550 3600 1550
+$Comp
+L 00-cool_stuff:0V #PWR0113
+U 1 1 5D18C6FC
+P 3400 2000
+F 0 "#PWR0113" H 3400 1750 50  0001 C CNN
+F 1 "0V" H 3405 1827 50  0000 C CNN
+F 2 "" H 3400 2000 50  0001 C CNN
+F 3 "" H 3400 2000 50  0001 C CNN
+	1    3400 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2000 3400 1950
+$Comp
+L 00-cool_stuff:resistor R53
+U 1 1 5D1928DC
+P 3400 3150
+F 0 "R53" V 3254 3083 50  0000 R CNN
+F 1 "40k2" V 3345 3083 50  0000 R CNN
+F 2 "00-Mine:resistor-TH-10mm" H 3310 3190 50  0001 C CNN
+F 3 "~" V 3300 3150 50  0001 C CNN
+	1    3400 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 2900 3400 2800
+Connection ~ 3400 2800
+Wire Wire Line
+	3400 2800 3600 2800
+$Comp
+L 00-cool_stuff:0V #PWR0114
+U 1 1 5D1968E0
+P 3400 3250
+F 0 "#PWR0114" H 3400 3000 50  0001 C CNN
+F 1 "0V" H 3405 3077 50  0000 C CNN
+F 2 "" H 3400 3250 50  0001 C CNN
+F 3 "" H 3400 3250 50  0001 C CNN
+	1    3400 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3250 3400 3200
+Wire Wire Line
+	1950 1750 1950 1950
+$Comp
+L 4ms-headers:Conn_01x05 J2
+U 1 1 5D1DD6C3
+P 5800 4800
+F 0 "J2" H 5880 4842 50  0000 L CNN
+F 1 "PAM8302 breakout" H 5880 4751 50  0000 L CNN
+F 2 "Connectors:1X05_LOCK_LONGPADS" H 5800 4800 50  0001 C CNN
+F 3 "~" H 5800 4800 50  0001 C CNN
+	1    5800 4800
+	1    0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0115
+U 1 1 5D1E1575
+P 4950 4750
+F 0 "#PWR0115" H 4950 4500 50  0001 C CNN
+F 1 "0V" H 4955 4577 50  0000 C CNN
+F 2 "" H 4950 4750 50  0001 C CNN
+F 3 "" H 4950 4750 50  0001 C CNN
+	1    4950 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4750 4950 4700
+Wire Wire Line
+	4950 4700 5200 4700
+$Comp
+L power:+5V #PWR0116
+U 1 1 5D1E571D
+P 5400 4400
+F 0 "#PWR0116" H 5400 4250 50  0001 C CNN
+F 1 "+5V" H 5415 4573 50  0000 C CNN
+F 2 "" H 5400 4400 50  0001 C CNN
+F 3 "" H 5400 4400 50  0001 C CNN
+	1    5400 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4400 5400 4800
+Wire Wire Line
+	5400 4800 5600 4800
+Wire Wire Line
+	5400 4800 5400 4900
+Wire Wire Line
+	5400 4900 5600 4900
+Connection ~ 5400 4800
+Wire Wire Line
+	5600 5000 5200 5000
+Wire Wire Line
+	5200 5000 5200 4700
+Connection ~ 5200 4700
+Wire Wire Line
+	5200 4700 5600 4700
+$Comp
+L 00-cool_stuff:resistor R34
+U 1 1 5D1F0A21
+P 2700 1550
+F 0 "R34" H 2600 1345 50  0000 C CNN
+F 1 "1k" H 2600 1436 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 2610 1590 50  0001 C CNN
+F 3 "~" V 2600 1550 50  0001 C CNN
+	1    2700 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R51
+U 1 1 5D1F5757
+P 2700 2800
+F 0 "R51" H 2600 2595 50  0000 C CNN
+F 1 "1k" H 2600 2686 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 2610 2840 50  0001 C CNN
+F 3 "~" V 2600 2800 50  0001 C CNN
+	1    2700 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L dk_Barrel-Audio-Connectors:RA49B14B CON1
+U 1 1 5D22E156
+P 5550 3550
+F 0 "CON1" H 5222 3608 60  0000 R CNN
+F 1 "headphones" H 5222 3502 60  0000 R CNN
+F 2 "00-Mine:1X05-switched_TRS" H 5750 3750 60  0001 L CNN
+F 3 "http://www.switchcraft.com/Drawings/ra49b_Series_cd.pdf" H 5750 3850 60  0001 L CNN
+F 4 "SC2030-ND" H 5750 3950 60  0001 L CNN "Digi-Key_PN"
+F 5 "RA49B14B" H 5750 4050 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 5750 4150 60  0001 L CNN "Category"
+F 7 "Barrel - Audio Connectors" H 5750 4250 60  0001 L CNN "Family"
+F 8 "http://www.switchcraft.com/Drawings/ra49b_Series_cd.pdf" H 5750 4350 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/switchcraft-inc/RA49B14B/SC2030-ND/1288995" H 5750 4450 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN JACK STEREO 6.35MM R/A" H 5750 4550 60  0001 L CNN "Description"
+F 11 "Switchcraft Inc." H 5750 4650 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5750 4750 60  0001 L CNN "Status"
+	1    5550 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0117
+U 1 1 5D24A6DB
+P 5100 3800
+F 0 "#PWR0117" H 5100 3550 50  0001 C CNN
+F 1 "0V" H 5105 3627 50  0000 C CNN
+F 2 "" H 5100 3800 50  0001 C CNN
+F 3 "" H 5100 3800 50  0001 C CNN
+	1    5100 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3800 5100 3750
+Wire Wire Line
+	5100 3750 5150 3750
+Wire Wire Line
+	2950 2800 3050 2800
+Wire Wire Line
+	2950 1550 3050 1550
+Wire Wire Line
+	4600 2900 4750 2900
+Wire Wire Line
+	4750 2900 4750 3550
+Wire Wire Line
+	4750 3550 5150 3550
+Wire Wire Line
+	5150 3350 4850 3350
+Wire Wire Line
+	4850 3350 4850 1650
+Wire Wire Line
+	4850 1650 4600 1650
+$Comp
+L 00-cool_stuff:resistor R57
+U 1 1 5D2AAA5D
+P 4650 4250
+F 0 "R57" V 4504 4318 50  0000 L CNN
+F 1 "470R" V 4595 4318 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4560 4290 50  0001 C CNN
+F 3 "~" V 4550 4250 50  0001 C CNN
+	1    4650 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R54
+U 1 1 5D2AB2C3
+P 4300 4250
+F 0 "R54" V 4154 4318 50  0000 L CNN
+F 1 "470R" V 4245 4318 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4210 4290 50  0001 C CNN
+F 3 "~" V 4200 4250 50  0001 C CNN
+	1    4300 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 3450 4300 3450
+Wire Wire Line
+	4300 3450 4300 4000
+Wire Wire Line
+	5150 3650 4650 3650
+Wire Wire Line
+	4650 3650 4650 4000
+Wire Wire Line
+	5600 4600 4650 4600
+Wire Wire Line
+	4300 4600 4300 4300
+Wire Wire Line
+	4650 4300 4650 4600
+Connection ~ 4650 4600
+Wire Wire Line
+	4650 4600 4300 4600
+$Comp
+L 00-cool_stuff:resistor R58
+U 1 1 5D2BB5A4
+P 4650 5250
+F 0 "R58" V 4504 5318 50  0000 L CNN
+F 1 "20k" V 4595 5318 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4560 5290 50  0001 C CNN
+F 3 "~" V 4550 5250 50  0001 C CNN
+	1    4650 5250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 5000 4650 4600
+$Comp
+L 00-cool_stuff:0V #PWR0118
+U 1 1 5D2BFC08
+P 4650 5400
+F 0 "#PWR0118" H 4650 5150 50  0001 C CNN
+F 1 "0V" H 4655 5227 50  0000 C CNN
+F 2 "" H 4650 5400 50  0001 C CNN
+F 3 "" H 4650 5400 50  0001 C CNN
+	1    4650 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 5400 4650 5300
+Wire Wire Line
+	2400 2100 2400 1550
+Wire Wire Line
+	2400 1550 2650 1550
+Wire Wire Line
+	2400 2100 2400 2800
+Wire Wire Line
+	2400 2800 2650 2800
+Connection ~ 2400 2100
+$Comp
+L Amplifier_Operational:NJM4556A U11
+U 1 1 5D1228AB
+P 3900 1650
+F 0 "U11" H 3900 2017 50  0000 C CNN
+F 1 "NJM4556A" H 3900 1926 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 3900 1650 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM4556A_E.pdf" H 3900 1650 50  0001 C CNN
+	1    3900 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1750 1950 1750
+$EndSCHEMATC

@@ -1,0 +1,1024 @@
+EESchema Schematic File Version 4
+LIBS:benjolin-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 1150 2550 0    50   Input ~ 0
+TRIANGLE2
+Text HLabel 1150 2350 0    50   Input ~ 0
+TRIANGLE1
+Wire Wire Line
+	1150 2550 1250 2550
+Wire Wire Line
+	1150 2350 1250 2350
+Text HLabel 2100 3550 2    50   Output ~ 0
+PWM_OUT
+$Comp
+L 00-cool_stuff:resistor R31
+U 1 1 5CB96900
+P 2100 2250
+F 0 "R31" V 1954 2318 50  0000 L CNN
+F 1 "150k" V 2045 2318 50  0000 L CNN
+F 2 "" H 2010 2290 50  0001 C CNN
+F 3 "~" V 2000 2250 50  0001 C CNN
+	1    2100 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R33
+U 1 1 5CB97A59
+P 2450 2600
+F 0 "R33" V 2304 2668 50  0000 L CNN
+F 1 "10k" V 2395 2668 50  0000 L CNN
+F 2 "" H 2360 2640 50  0001 C CNN
+F 3 "~" V 2350 2600 50  0001 C CNN
+	1    2450 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR037
+U 1 1 5CB98C43
+P 2450 2750
+AR Path="/5CB98C43" Ref="#PWR037"  Part="1" 
+AR Path="/5CB2CC25/5CB98C43" Ref="#PWR037"  Part="1" 
+AR Path="/5CB8FD1C/5CB98C43" Ref="#PWR037"  Part="1" 
+F 0 "#PWR037" H 2450 2500 50  0001 C CNN
+F 1 "0V" H 2455 2577 50  0000 C CNN
+F 2 "" H 2450 2750 50  0001 C CNN
+F 3 "" H 2450 2750 50  0001 C CNN
+	1    2450 2750
+	1    0    0    -1  
+$EndComp
+Text HLabel 1250 1700 0    50   Input ~ 0
+RUNGLER_CV
+$Comp
+L 00-cool_stuff:resistor R30
+U 1 1 5CB99376
+P 2000 1700
+F 0 "R30" H 1900 1800 50  0000 C CNN
+F 1 "51k" H 1900 1600 50  0000 C CNN
+F 2 "" H 1910 1740 50  0001 C CNN
+F 3 "~" V 1900 1700 50  0001 C CNN
+	1    2000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR038
+U 1 1 5CB9C25E
+P 2850 1950
+AR Path="/5CB9C25E" Ref="#PWR038"  Part="1" 
+AR Path="/5CB2CC25/5CB9C25E" Ref="#PWR038"  Part="1" 
+AR Path="/5CB8FD1C/5CB9C25E" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 2850 1700 50  0001 C CNN
+F 1 "0V" H 2855 1777 50  0000 C CNN
+F 2 "" H 2850 1950 50  0001 C CNN
+F 3 "" H 2850 1950 50  0001 C CNN
+	1    2850 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 1950 2850 1900
+Wire Wire Line
+	2850 1900 2950 1900
+Wire Wire Line
+	2700 1350 2700 1700
+Wire Wire Line
+	2700 1700 2950 1700
+$Comp
+L 00-cool_stuff:resistor R37
+U 1 1 5CB9FF9C
+P 3350 1350
+F 0 "R37" H 3250 1450 50  0000 C CNN
+F 1 "30k" H 3250 1250 50  0000 C CNN
+F 2 "" H 3260 1390 50  0001 C CNN
+F 3 "~" V 3250 1350 50  0001 C CNN
+	1    3350 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1350 2700 1350
+Connection ~ 2700 1350
+Wire Wire Line
+	3400 1350 3600 1350
+Wire Wire Line
+	3600 1350 3600 1800
+Wire Wire Line
+	3600 1800 3550 1800
+$Comp
+L 00-cool_stuff:resistor R38
+U 1 1 5CBACD46
+P 3950 1800
+F 0 "R38" H 3850 1900 50  0000 C CNN
+F 1 "30k" H 3850 1700 50  0000 C CNN
+F 2 "" H 3860 1840 50  0001 C CNN
+F 3 "~" V 3850 1800 50  0001 C CNN
+	1    3950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4ms-ic:V2164 U2
+U 3 1 5CBAE059
+P 5150 1800
+F 0 "U2" H 5250 1650 60  0000 C CNN
+F 1 "V2164" H 5300 1950 60  0000 C CNN
+F 2 "" H 5150 1800 60  0001 C CNN
+F 3 "" H 5150 1800 60  0000 C CNN
+	3    5150 1800
+	1    0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R39
+U 1 1 5CBB1FCF
+P 4100 2200
+F 0 "R39" V 3954 2268 50  0000 L CNN
+F 1 "510R" V 4045 2268 50  0000 L CNN
+F 2 "" H 4010 2240 50  0001 C CNN
+F 3 "~" V 4000 2200 50  0001 C CNN
+	1    4100 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C6
+U 1 1 5CBB3772
+P 4100 2500
+F 0 "C6" V 4146 2408 50  0000 R CNN
+F 1 "560p" V 4055 2408 50  0000 R CNN
+F 2 "" V 4100 2500 50  0001 C CNN
+F 3 "~" V 4100 2500 50  0001 C CNN
+	1    4100 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR040
+U 1 1 5CBB66C3
+P 4100 2700
+AR Path="/5CBB66C3" Ref="#PWR040"  Part="1" 
+AR Path="/5CB2CC25/5CBB66C3" Ref="#PWR040"  Part="1" 
+AR Path="/5CB8FD1C/5CBB66C3" Ref="#PWR040"  Part="1" 
+F 0 "#PWR040" H 4100 2450 50  0001 C CNN
+F 1 "0V" H 4105 2527 50  0000 C CNN
+F 2 "" H 4100 2700 50  0001 C CNN
+F 3 "" H 4100 2700 50  0001 C CNN
+	1    4100 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2700 4100 2600
+Wire Wire Line
+	4100 2400 4100 2250
+Wire Wire Line
+	4100 1950 4100 1800
+Wire Wire Line
+	5550 1800 5850 1800
+$Comp
+L 00-cool_stuff:0V #PWR045
+U 1 1 5CBBBE08
+P 5850 2000
+AR Path="/5CBBBE08" Ref="#PWR045"  Part="1" 
+AR Path="/5CB2CC25/5CBBBE08" Ref="#PWR045"  Part="1" 
+AR Path="/5CB8FD1C/5CBBBE08" Ref="#PWR045"  Part="1" 
+F 0 "#PWR045" H 5850 1750 50  0001 C CNN
+F 1 "0V" H 5850 1850 50  0000 C CNN
+F 2 "" H 5850 2000 50  0001 C CNN
+F 3 "" H 5850 2000 50  0001 C CNN
+	1    5850 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 2000 5950 2000
+$Comp
+L 00-cool_stuff:cap_small C8
+U 1 1 5CBBF482
+P 6250 1500
+F 0 "C8" H 6350 1550 50  0000 C CNN
+F 1 "220p" H 6400 1450 50  0000 C CNN
+F 2 "" V 6250 1500 50  0001 C CNN
+F 3 "~" V 6250 1500 50  0001 C CNN
+	1    6250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 1500 5850 1500
+Wire Wire Line
+	5850 1500 5850 1800
+Connection ~ 5850 1800
+Wire Wire Line
+	5850 1800 5950 1800
+Wire Wire Line
+	6550 1900 6650 1900
+Wire Wire Line
+	6650 1900 6650 1500
+Wire Wire Line
+	6650 1500 6350 1500
+$Comp
+L 00-cool_stuff:resistor R48
+U 1 1 5CBC189C
+P 7050 1900
+F 0 "R48" H 6950 2000 50  0000 C CNN
+F 1 "30k" H 6950 1800 50  0000 C CNN
+F 2 "" H 6960 1940 50  0001 C CNN
+F 3 "~" V 6950 1900 50  0001 C CNN
+	1    7050 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1900 6800 1900
+Connection ~ 6650 1900
+$Comp
+L 4ms-ic:V2164 U2
+U 4 1 5CBC303B
+P 8600 1900
+F 0 "U2" H 8650 1700 60  0000 C CNN
+F 1 "V2164" H 8700 2100 60  0000 C CNN
+F 2 "" H 8600 1900 60  0001 C CNN
+F 3 "" H 8600 1900 60  0000 C CNN
+	4    8600 1900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4650 1300 4650 1550
+$Comp
+L 00-cool_stuff:cap_small C10
+U 1 1 5CBC98F0
+P 9200 1900
+F 0 "C10" H 9100 1950 50  0000 C CNN
+F 1 "220p" H 9050 1850 50  0000 C CNN
+F 2 "" V 9200 1900 50  0001 C CNN
+F 3 "~" V 9200 1900 50  0001 C CNN
+	1    9200 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1900 9100 1900
+Wire Wire Line
+	9300 1900 9350 1900
+$Comp
+L 00-cool_stuff:0V #PWR049
+U 1 1 5CBCC1A2
+P 9350 2150
+AR Path="/5CBCC1A2" Ref="#PWR049"  Part="1" 
+AR Path="/5CB2CC25/5CBCC1A2" Ref="#PWR049"  Part="1" 
+AR Path="/5CB8FD1C/5CBCC1A2" Ref="#PWR049"  Part="1" 
+F 0 "#PWR049" H 9350 1900 50  0001 C CNN
+F 1 "0V" H 9355 1977 50  0000 C CNN
+F 2 "" H 9350 2150 50  0001 C CNN
+F 3 "" H 9350 2150 50  0001 C CNN
+	1    9350 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 2150 9350 2100
+Wire Wire Line
+	9350 2100 9400 2100
+$Comp
+L 00-cool_stuff:cap_small C11
+U 1 1 5CBCD038
+P 9700 1550
+F 0 "C11" H 9800 1600 50  0000 C CNN
+F 1 "220p" H 9850 1500 50  0000 C CNN
+F 2 "" V 9700 1550 50  0001 C CNN
+F 3 "~" V 9700 1550 50  0001 C CNN
+	1    9700 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 1550 9350 1550
+Wire Wire Line
+	9350 1550 9350 1900
+Connection ~ 9350 1900
+Wire Wire Line
+	9350 1900 9400 1900
+Wire Wire Line
+	10000 2000 10100 2000
+Wire Wire Line
+	10100 2000 10100 1550
+Wire Wire Line
+	10100 1550 9800 1550
+$Comp
+L 00-cool_stuff:resistor R49
+U 1 1 5CBCFDD7
+P 7150 2250
+F 0 "R49" V 7004 2318 50  0000 L CNN
+F 1 "510R" V 7095 2318 50  0000 L CNN
+F 2 "" H 7060 2290 50  0001 C CNN
+F 3 "~" V 7050 2250 50  0001 C CNN
+	1    7150 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C9
+U 1 1 5CBCFDE1
+P 7150 2550
+F 0 "C9" V 7196 2458 50  0000 R CNN
+F 1 "560p" V 7105 2458 50  0000 R CNN
+F 2 "" V 7150 2550 50  0001 C CNN
+F 3 "~" V 7150 2550 50  0001 C CNN
+	1    7150 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR048
+U 1 1 5CBCFDEB
+P 7150 2750
+AR Path="/5CBCFDEB" Ref="#PWR048"  Part="1" 
+AR Path="/5CB2CC25/5CBCFDEB" Ref="#PWR048"  Part="1" 
+AR Path="/5CB8FD1C/5CBCFDEB" Ref="#PWR048"  Part="1" 
+F 0 "#PWR048" H 7150 2500 50  0001 C CNN
+F 1 "0V" H 7155 2577 50  0000 C CNN
+F 2 "" H 7150 2750 50  0001 C CNN
+F 3 "" H 7150 2750 50  0001 C CNN
+	1    7150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2750 7150 2650
+Wire Wire Line
+	7150 2450 7150 2300
+Connection ~ 8050 1900
+Wire Wire Line
+	8050 1900 8100 1900
+$Comp
+L 00-cool_stuff:resistor R50
+U 1 1 5CBD6F59
+P 9000 2400
+F 0 "R50" H 8900 2500 50  0000 C CNN
+F 1 "470k" H 8900 2300 50  0000 C CNN
+F 2 "" H 8910 2440 50  0001 C CNN
+F 3 "~" V 8900 2400 50  0001 C CNN
+	1    9000 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 2400 10100 2400
+Wire Wire Line
+	10100 2400 10100 2000
+Connection ~ 10100 2000
+Wire Wire Line
+	8750 2400 8050 2400
+Wire Wire Line
+	8050 1900 8050 2400
+Wire Wire Line
+	7150 2000 7150 1900
+$Comp
+L 00-cool_stuff:cap_small C7
+U 1 1 5CBEAEA5
+P 5450 2250
+F 0 "C7" H 5550 2300 50  0000 C CNN
+F 1 "220p" H 5600 2200 50  0000 C CNN
+F 2 "" V 5450 2250 50  0001 C CNN
+F 3 "~" V 5450 2250 50  0001 C CNN
+	1    5450 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 2250 6650 2250
+Wire Wire Line
+	6650 2250 6650 2000
+Wire Wire Line
+	5350 2250 4550 2250
+Wire Wire Line
+	4550 2250 4550 1800
+Wire Wire Line
+	4550 1800 4650 1800
+Wire Wire Line
+	3600 1800 3700 1800
+Connection ~ 3600 1800
+Wire Wire Line
+	4000 1800 4100 1800
+Wire Wire Line
+	4100 1800 4450 1800
+Connection ~ 4100 1800
+Connection ~ 4550 1800
+$Comp
+L 00-cool_stuff:resistor R46
+U 1 1 5CC16F53
+P 5850 800
+F 0 "R46" H 5750 900 50  0000 C CNN
+F 1 "30k" H 5750 700 50  0000 C CNN
+F 2 "" H 5760 840 50  0001 C CNN
+F 3 "~" V 5750 800 50  0001 C CNN
+	1    5850 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 800  2700 800 
+Wire Wire Line
+	2700 800  2700 1350
+Wire Wire Line
+	10100 800  10100 1550
+Connection ~ 10100 1550
+Text HLabel 1600 5300 0    50   Input ~ 0
+CUTOFF_CV_IN
+Wire Wire Line
+	1600 5300 2000 5300
+$Comp
+L 00-cool_stuff:resistor R32
+U 1 1 5CC21A47
+P 2450 1700
+F 0 "R32" H 2350 1800 50  0000 C CNN
+F 1 "100k" H 2350 1600 50  0000 C CNN
+F 2 "" H 2360 1740 50  0001 C CNN
+F 3 "~" V 2350 1700 50  0001 C CNN
+	1    2450 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1700 1750 1700
+Wire Wire Line
+	2050 1700 2100 1700
+Wire Wire Line
+	2500 1700 2700 1700
+Connection ~ 2700 1700
+Wire Wire Line
+	2100 2000 2100 1950
+Connection ~ 2100 1700
+Wire Wire Line
+	2100 1700 2200 1700
+Wire Wire Line
+	1850 2450 1950 2450
+Wire Wire Line
+	2100 2300 2100 2450
+Wire Wire Line
+	2100 1950 2450 1950
+Connection ~ 2100 1950
+Wire Wire Line
+	2100 1950 2100 1700
+Wire Wire Line
+	2450 1950 2450 2250
+Wire Wire Line
+	2450 2650 2450 2750
+Connection ~ 1950 2450
+Wire Wire Line
+	1950 2450 2100 2450
+$Comp
+L 00-cool_stuff:resistor R40
+U 1 1 5CC394C2
+P 4200 4250
+F 0 "R40" H 4100 4350 50  0000 C CNN
+F 1 "100k" H 4100 4150 50  0000 C CNN
+F 2 "" H 4110 4290 50  0001 C CNN
+F 3 "~" V 4100 4250 50  0001 C CNN
+	1    4200 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2250 2800 2250
+Wire Wire Line
+	2800 2250 2800 4250
+Wire Wire Line
+	2800 4250 3950 4250
+Connection ~ 2450 2250
+Wire Wire Line
+	2450 2250 2450 2350
+Wire Wire Line
+	4250 4250 5650 4250
+$Comp
+L 00-cool_stuff:TL074-f-separate U6
+U 1 1 5CC54D04
+P 1550 2450
+F 0 "U6" H 1550 2817 50  0000 C CNN
+F 1 "TL074" H 1550 2726 50  0000 C CNN
+F 2 "" H 1500 2550 50  0001 C CNN
+F 3 "" H 1600 2650 50  0001 C CNN
+	1    1550 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:TL074-f U6
+U 2 1 5CC56B03
+P 3250 1800
+F 0 "U6" H 3350 1950 50  0000 C CNN
+F 1 "TL074" H 3450 1650 50  0000 C CNN
+F 2 "" H 3200 1900 50  0001 C CNN
+F 3 "" H 3300 2000 50  0001 C CNN
+	2    3250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:TL074-f U6
+U 3 1 5CC5749D
+P 6250 1900
+F 0 "U6" H 6350 2050 50  0000 C CNN
+F 1 "TL074" H 6400 1750 50  0000 C CNN
+F 2 "" H 6200 2000 50  0001 C CNN
+F 3 "" H 6300 2100 50  0001 C CNN
+	3    6250 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:TL074-f U6
+U 4 1 5CC5CB72
+P 9700 2000
+F 0 "U6" H 9800 2150 50  0000 C CNN
+F 1 "TL074" H 9850 1850 50  0000 C CNN
+F 2 "" H 9650 2100 50  0001 C CNN
+F 3 "" H 9750 2200 50  0001 C CNN
+	4    9700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R42
+U 1 1 5CC617F6
+P 4950 2750
+F 0 "R42" H 4850 2850 50  0000 C CNN
+F 1 "15k" H 4850 2650 50  0000 C CNN
+F 2 "" H 4860 2790 50  0001 C CNN
+F 3 "~" V 4850 2750 50  0001 C CNN
+	1    4950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R43
+U 1 1 5CC62158
+P 5250 3100
+F 0 "R43" V 5104 3168 50  0000 L CNN
+F 1 "1k5" V 5195 3168 50  0000 L CNN
+F 2 "" H 5160 3140 50  0001 C CNN
+F 3 "~" V 5150 3100 50  0001 C CNN
+	1    5250 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 2750 5250 2750
+Wire Wire Line
+	5250 2750 5250 2850
+Wire Wire Line
+	4700 2750 4450 2750
+Wire Wire Line
+	4450 2750 4450 1800
+Connection ~ 4450 1800
+Wire Wire Line
+	4450 1800 4550 1800
+Wire Wire Line
+	5250 2750 5450 2750
+Connection ~ 5250 2750
+$Comp
+L 00-cool_stuff:0V #PWR044
+U 1 1 5CC6E399
+P 5600 3350
+AR Path="/5CC6E399" Ref="#PWR044"  Part="1" 
+AR Path="/5CB2CC25/5CC6E399" Ref="#PWR044"  Part="1" 
+AR Path="/5CB8FD1C/5CC6E399" Ref="#PWR044"  Part="1" 
+F 0 "#PWR044" H 5600 3100 50  0001 C CNN
+F 1 "0V" H 5605 3177 50  0000 C CNN
+F 2 "" H 5600 3350 50  0001 C CNN
+F 3 "" H 5600 3350 50  0001 C CNN
+	1    5600 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3350 5600 3250
+$Comp
+L 00-cool_stuff:Vee #PWR047
+U 1 1 5CC75BF3
+P 10000 4950
+F 0 "#PWR047" H 10000 5050 50  0001 C CNN
+F 1 "Vee" H 10015 5123 50  0000 C CNN
+F 2 "" H 10000 4950 50  0001 C CNN
+F 3 "" H 10000 4950 50  0001 C CNN
+	1    10000 4950
+	1    0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R47
+U 1 1 5CC76C38
+P 6100 3700
+F 0 "R47" H 6000 3800 50  0000 C CNN
+F 1 "30k" H 6000 3600 50  0000 C CNN
+F 2 "" H 6010 3740 50  0001 C CNN
+F 3 "~" V 6000 3700 50  0001 C CNN
+	1    6100 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3700 5650 3700
+Wire Wire Line
+	5650 3700 5650 4250
+Connection ~ 5650 4250
+Wire Wire Line
+	5650 4250 5750 4250
+Wire Wire Line
+	6350 4350 6400 4350
+Wire Wire Line
+	6400 4350 6400 3700
+Wire Wire Line
+	6400 3700 6150 3700
+Wire Wire Line
+	5600 2600 5600 2500
+Wire Wire Line
+	5600 2500 6650 2500
+Wire Wire Line
+	6650 2500 6650 4350
+Wire Wire Line
+	6650 4350 6400 4350
+Connection ~ 6400 4350
+Wire Wire Line
+	5750 4450 5650 4450
+Wire Wire Line
+	5650 4450 5650 4900
+Wire Wire Line
+	5650 4900 6800 4900
+Wire Wire Line
+	6650 2000 6800 2000
+Wire Wire Line
+	6800 2000 6800 4900
+Connection ~ 6650 2000
+Wire Wire Line
+	6650 2000 6650 1900
+$Comp
+L 00-cool_stuff:resistor R44
+U 1 1 5CC99D6A
+P 5400 4450
+F 0 "R44" H 5300 4550 50  0000 C CNN
+F 1 "100k" H 5300 4350 50  0000 C CNN
+F 2 "" H 5310 4490 50  0001 C CNN
+F 3 "~" V 5300 4450 50  0001 C CNN
+	1    5400 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4450 5650 4450
+Connection ~ 5650 4450
+$Comp
+L 00-cool_stuff:0V #PWR043
+U 1 1 5CCA631A
+P 5050 6150
+AR Path="/5CCA631A" Ref="#PWR043"  Part="1" 
+AR Path="/5CB2CC25/5CCA631A" Ref="#PWR043"  Part="1" 
+AR Path="/5CB8FD1C/5CCA631A" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 5050 5900 50  0001 C CNN
+F 1 "0V" H 5055 5977 50  0000 C CNN
+F 2 "" H 5050 6150 50  0001 C CNN
+F 3 "" H 5050 6150 50  0001 C CNN
+	1    5050 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 6150 5050 6100
+Wire Wire Line
+	5050 6100 5100 6100
+$Comp
+L 00-cool_stuff:diode D5
+U 1 1 5CCAA729
+P 5400 5500
+F 0 "D5" H 5400 5600 50  0000 C CNN
+F 1 "1n4148" H 5400 5400 50  0000 C CNN
+F 2 "" H 5400 5500 50  0001 C CNN
+F 3 "~" H 5400 5500 50  0001 C CNN
+	1    5400 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R45
+U 1 1 5CCAB2BC
+P 5500 5150
+F 0 "R45" H 5400 5250 50  0000 C CNN
+F 1 "10k" H 5400 5050 50  0000 C CNN
+F 2 "" H 5410 5190 50  0001 C CNN
+F 3 "~" V 5400 5150 50  0001 C CNN
+	1    5500 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 6000 5800 6000
+Wire Wire Line
+	5550 5500 5800 5500
+Wire Wire Line
+	5100 5900 5000 5900
+Wire Wire Line
+	5000 5900 5000 5500
+Wire Wire Line
+	5000 5150 5250 5150
+Wire Wire Line
+	5250 5500 5000 5500
+Connection ~ 5000 5500
+Wire Wire Line
+	5000 5500 5000 5150
+Wire Wire Line
+	5800 5500 5800 6000
+$Comp
+L 00-cool_stuff:diode D6
+U 1 1 5CCC3E07
+P 6100 6000
+F 0 "D6" H 6100 6100 50  0000 C CNN
+F 1 "1n4148" H 6100 5900 50  0000 C CNN
+F 2 "" H 6100 6000 50  0001 C CNN
+F 3 "~" H 6100 6000 50  0001 C CNN
+	1    6100 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 6000 5800 6000
+Connection ~ 5800 6000
+Wire Wire Line
+	6250 6000 6350 6000
+Wire Wire Line
+	6350 6000 6350 5150
+Wire Wire Line
+	5550 5150 6350 5150
+Connection ~ 6350 6000
+Wire Wire Line
+	5150 4450 5000 4450
+Wire Wire Line
+	5000 4450 5000 5150
+Connection ~ 5000 5150
+Wire Wire Line
+	8100 1300 8100 1650
+Wire Wire Line
+	1950 3550 2100 3550
+Wire Wire Line
+	1950 2450 1950 3550
+Text HLabel 10350 2000 2    50   Output ~ 0
+LP_OUT
+Wire Wire Line
+	10350 2000 10100 2000
+Wire Wire Line
+	5250 3150 5250 3250
+Wire Wire Line
+	5250 3250 5600 3250
+Connection ~ 5600 3250
+Wire Wire Line
+	5600 3250 5600 2900
+$Comp
+L 00-cool_stuff:0V #PWR039
+U 1 1 5CCF2BD0
+P 2000 6500
+AR Path="/5CCF2BD0" Ref="#PWR039"  Part="1" 
+AR Path="/5CB2CC25/5CCF2BD0" Ref="#PWR039"  Part="1" 
+AR Path="/5CB8FD1C/5CCF2BD0" Ref="#PWR039"  Part="1" 
+F 0 "#PWR039" H 2000 6250 50  0001 C CNN
+F 1 "0V" H 2005 6327 50  0000 C CNN
+F 2 "" H 2000 6500 50  0001 C CNN
+F 3 "" H 2000 6500 50  0001 C CNN
+	1    2000 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R36
+U 1 1 5CCF2BB2
+P 2850 6350
+F 0 "R36" H 2750 6145 50  0000 C CNN
+F 1 "51k" H 2750 6236 50  0000 C CNN
+F 2 "" H 2760 6390 50  0001 C CNN
+F 3 "~" V 2750 6350 50  0001 C CNN
+	1    2850 6350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2250 7250 2250 7300
+Wire Wire Line
+	2150 7250 2250 7250
+Wire Wire Line
+	1750 7250 1850 7250
+Wire Wire Line
+	1750 7300 1750 7250
+$Comp
+L 00-cool_stuff:0V #PWR042
+U 1 1 5CCD9D1B
+P 2250 7300
+AR Path="/5CCD9D1B" Ref="#PWR042"  Part="1" 
+AR Path="/5CB2CC25/5CCD9D1B" Ref="#PWR042"  Part="1" 
+AR Path="/5CB8FD1C/5CCD9D1B" Ref="#PWR042"  Part="1" 
+F 0 "#PWR042" H 2250 7050 50  0001 C CNN
+F 1 "0V" H 2255 7127 50  0000 C CNN
+F 2 "" H 2250 7300 50  0001 C CNN
+F 3 "" H 2250 7300 50  0001 C CNN
+	1    2250 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:Vee #PWR041
+U 1 1 5CCD985E
+P 1750 7300
+F 0 "#PWR041" H 1750 7400 50  0001 C CNN
+F 1 "Vee" H 1765 7473 50  0000 C CNN
+F 2 "" H 1750 7300 50  0001 C CNN
+F 3 "" H 1750 7300 50  0001 C CNN
+	1    1750 7300
+	1    0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:potentiometer RV10
+U 1 1 5CCD87C3
+P 2000 7250
+F 0 "RV10" V 1887 7250 50  0000 C CNN
+F 1 "10k" V 1796 7250 50  0000 C CNN
+F 2 "" H 2000 7250 50  0001 C CNN
+F 3 "~" H 2000 7250 50  0001 C CNN
+F 4 "Cutoff Offset" V 1705 7250 50  0000 C CNN "Label"
+	1    2000 7250
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R41
+U 1 1 5CCD75D3
+P 2850 6950
+F 0 "R41" H 2750 6745 50  0000 C CNN
+F 1 "51k" H 2750 6836 50  0000 C CNN
+F 2 "" H 2760 6990 50  0001 C CNN
+F 3 "~" V 2750 6950 50  0001 C CNN
+	1    2850 6950
+	-1   0    0    1   
+$EndComp
+Text HLabel 1550 6100 0    50   Input ~ 0
+RUNGLER_CV
+$Comp
+L 00-cool_stuff:0V #PWR036
+U 1 1 5CC1ECB1
+P 2000 5700
+AR Path="/5CC1ECB1" Ref="#PWR036"  Part="1" 
+AR Path="/5CB2CC25/5CC1ECB1" Ref="#PWR036"  Part="1" 
+AR Path="/5CB8FD1C/5CC1ECB1" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 2000 5450 50  0001 C CNN
+F 1 "0V" H 2005 5527 50  0000 C CNN
+F 2 "" H 2000 5700 50  0001 C CNN
+F 3 "" H 2000 5700 50  0001 C CNN
+	1    2000 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:potentiometer RV8
+U 1 1 5CC1C05A
+P 2000 5550
+F 0 "RV8" H 1932 5596 50  0000 R CNN
+F 1 "10k" H 1932 5505 50  0000 R CNN
+F 2 "" H 2000 5550 50  0001 C CNN
+F 3 "~" H 2000 5550 50  0001 C CNN
+	1    2000 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:potentiometer RV11
+U 1 1 5CC6A68A
+P 5600 2750
+F 0 "RV11" H 5532 2704 50  0000 R CNN
+F 1 "10k" H 5532 2795 50  0000 R CNN
+F 2 "" H 5600 2750 50  0001 C CNN
+F 3 "~" H 5600 2750 50  0001 C CNN
+F 4 "Resonance" H 5550 2900 50  0000 R CNN "Label"
+	1    5600 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 5400 2000 5300
+Wire Wire Line
+	7100 1900 7150 1900
+Wire Wire Line
+	4650 1300 7500 1300
+Wire Wire Line
+	5900 800  10100 800 
+Wire Wire Line
+	7500 1300 7500 6000
+Wire Wire Line
+	6350 6000 7500 6000
+Connection ~ 7500 1300
+Wire Wire Line
+	7500 1300 8100 1300
+Wire Wire Line
+	7150 1900 8050 1900
+Connection ~ 7150 1900
+$Comp
+L 00-cool_stuff:Vcc #PWR046
+U 1 1 5CC75554
+P 10000 4450
+F 0 "#PWR046" H 10000 4300 50  0001 C CNN
+F 1 "Vcc" H 10015 4623 50  0000 C CNN
+F 2 "" H 10000 4450 50  0001 C CNN
+F 3 "" H 10000 4450 50  0001 C CNN
+	1    10000 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R35
+U 1 1 5CD127C6
+P 2850 5550
+F 0 "R35" H 2750 5345 50  0000 C CNN
+F 1 "51k" H 2750 5436 50  0000 C CNN
+F 2 "" H 2760 5590 50  0001 C CNN
+F 3 "~" V 2750 5550 50  0001 C CNN
+	1    2850 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:potentiometer RV9
+U 1 1 5CCF2BBC
+P 2000 6350
+F 0 "RV9" H 1933 6427 50  0000 R CNN
+F 1 "10k" H 1933 6336 50  0000 R CNN
+F 2 "" H 2000 6350 50  0001 C CNN
+F 3 "~" H 2000 6350 50  0001 C CNN
+F 4 "Rungler -> Cutoff Mod Atten." H 1933 6259 31  0000 R CNN "Label"
+	1    2000 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 6350 2150 6350
+Wire Wire Line
+	1550 6100 2000 6100
+Wire Wire Line
+	2000 6100 2000 6200
+Wire Wire Line
+	2800 6950 2000 6950
+Wire Wire Line
+	2000 6950 2000 7100
+Wire Wire Line
+	2800 5550 2150 5550
+Wire Wire Line
+	3100 5550 3950 5550
+Wire Wire Line
+	3950 5550 3950 5900
+Wire Wire Line
+	3950 5900 5000 5900
+Connection ~ 5000 5900
+Wire Wire Line
+	3100 6950 3950 6950
+Wire Wire Line
+	3950 6950 3950 6350
+Connection ~ 3950 5900
+Wire Wire Line
+	3100 6350 3950 6350
+Connection ~ 3950 6350
+Wire Wire Line
+	3950 6350 3950 5900
+$Comp
+L 00-cool_stuff:Vcc #PWR0108
+U 1 1 5D4B30F2
+P 10000 5500
+F 0 "#PWR0108" H 10000 5350 50  0001 C CNN
+F 1 "Vcc" H 10015 5673 50  0000 C CNN
+F 2 "" H 10000 5500 50  0001 C CNN
+F 3 "" H 10000 5500 50  0001 C CNN
+	1    10000 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 6200 10000 6150
+Wire Wire Line
+	10000 5500 10000 5550
+$Comp
+L 00-cool_stuff:TL074-f-separate U6
+U 5 1 5D4B086D
+P 10100 5850
+F 0 "U6" H 10330 5896 50  0000 L CNN
+F 1 "TL074" H 10330 5805 50  0000 L CNN
+F 2 "" H 10050 5950 50  0001 C CNN
+F 3 "" H 10150 6050 50  0001 C CNN
+	5    10100 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:TL072-separate U7
+U 1 1 5D755777
+P 6050 4350
+F 0 "U7" H 6050 4717 50  0000 C CNN
+F 1 "TL072" H 6050 4626 50  0000 C CNN
+F 2 "" H 6050 4350 50  0001 C CNN
+F 3 "" H 6050 4350 50  0001 C CNN
+	1    6050 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:TL072-separate U7
+U 2 1 5D756311
+P 5400 6000
+F 0 "U7" H 5400 5725 50  0000 C CNN
+F 1 "TL072" H 5400 5634 50  0000 C CNN
+F 2 "" H 5400 6000 50  0001 C CNN
+F 3 "" H 5400 6000 50  0001 C CNN
+	2    5400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:TL072-separate U7
+U 3 1 5D756E31
+P 10100 4700
+F 0 "U7" H 10330 4746 50  0000 L CNN
+F 1 "TL072" H 10330 4655 50  0000 L CNN
+F 2 "" H 10100 4700 50  0001 C CNN
+F 3 "" H 10100 4700 50  0001 C CNN
+	3    10100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:Vee #PWR0109
+U 1 1 5D7619A9
+P 10000 6200
+F 0 "#PWR0109" H 10000 6300 50  0001 C CNN
+F 1 "Vee" H 10015 6373 50  0000 C CNN
+F 2 "" H 10000 6200 50  0001 C CNN
+F 3 "" H 10000 6200 50  0001 C CNN
+	1    10000 6200
+	1    0    0    1   
+$EndComp
+$EndSCHEMATC

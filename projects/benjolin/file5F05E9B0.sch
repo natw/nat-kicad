@@ -1,0 +1,364 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power1-rescue:power-barrel-jack-00-cool_stuff J2
+U 1 1 5D05C35F
+P 3550 4250
+F 0 "J2" H 3632 4581 50  0000 C CNN
+F 1 "power-barrel-jack" H 3632 4490 50  0000 C CNN
+F 2 "00-Mine:1X02_screwterm" H 3550 4200 50  0001 C CNN
+F 3 "~" H 3550 4200 50  0001 C CNN
+	1    3550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:diode D2
+U 1 1 5D060786
+P 4350 4100
+F 0 "D2" H 4350 4316 50  0000 C CNN
+F 1 "4001" H 4350 4225 50  0000 C CNN
+F 2 "00-Mine:diode-TH" H 4350 4100 50  0001 C CNN
+F 3 "~" H 4350 4100 50  0001 C CNN
+	1    4350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:diode D11
+U 1 1 5D06118E
+P 4350 4700
+F 0 "D11" H 4350 4916 50  0000 C CNN
+F 1 "4001" H 4350 4825 50  0000 C CNN
+F 2 "00-Mine:diode-TH" H 4350 4700 50  0001 C CNN
+F 3 "~" H 4350 4700 50  0001 C CNN
+	1    4350 4700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4100 3950 4100
+$Comp
+L 00-cool_stuff:cap_polarized_small C1
+U 1 1 5D062B1A
+P 4700 4250
+F 0 "C1" H 4791 4296 50  0000 L CNN
+F 1 "4700uF" H 4791 4205 50  0000 L CNN
+F 2 "00-Mine:capacitor-7.5mmLS" H 4700 4250 50  0001 C CNN
+F 3 "~" H 4700 4250 50  0001 C CNN
+	1    4700 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4100 4700 4100
+Wire Wire Line
+	4700 4100 4700 4150
+Wire Wire Line
+	4700 4400 5200 4400
+Wire Wire Line
+	5200 4400 5200 4350
+Wire Wire Line
+	4700 4350 4700 4400
+Wire Wire Line
+	4700 4100 5200 4100
+Wire Wire Line
+	5200 4100 5200 4150
+Connection ~ 4700 4100
+Wire Wire Line
+	4700 4400 3750 4400
+Connection ~ 4700 4400
+$Comp
+L 00-cool_stuff:cap_polarized_small C4
+U 1 1 5D0673BF
+P 4700 4550
+F 0 "C4" H 4791 4596 50  0000 L CNN
+F 1 "4700uF" H 4791 4505 50  0000 L CNN
+F 2 "00-Mine:capacitor-7.5mmLS" H 4700 4550 50  0001 C CNN
+F 3 "~" H 4700 4550 50  0001 C CNN
+	1    4700 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4700 4700 4700
+Wire Wire Line
+	4700 4700 4700 4650
+Wire Wire Line
+	5200 4450 5200 4400
+Connection ~ 5200 4400
+Wire Wire Line
+	5200 4650 5200 4700
+Connection ~ 4700 4700
+Wire Wire Line
+	3950 4700 3950 4100
+Connection ~ 3950 4100
+Wire Wire Line
+	3950 4100 4200 4100
+Wire Wire Line
+	5200 4100 5450 4100
+Connection ~ 5200 4100
+Connection ~ 5200 4700
+$Comp
+L 00-cool_stuff:cap_small C3
+U 1 1 5D07A020
+P 6350 4250
+F 0 "C3" V 6304 4342 50  0000 L CNN
+F 1 "100nF" V 6395 4342 50  0000 L CNN
+F 2 "00-Mine:capacitor-TH-2.54mm" V 6350 4250 50  0001 C CNN
+F 3 "~" V 6350 4250 50  0001 C CNN
+	1    6350 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 4350 6350 4400
+$Comp
+L 00-cool_stuff:cap_small C7
+U 1 1 5D07BB24
+P 6350 4550
+F 0 "C7" V 6304 4642 50  0000 L CNN
+F 1 "100nF" V 6395 4642 50  0000 L CNN
+F 2 "00-Mine:capacitor-TH-2.54mm" V 6350 4550 50  0001 C CNN
+F 3 "~" V 6350 4550 50  0001 C CNN
+	1    6350 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 4650 6350 4700
+Wire Wire Line
+	6150 4100 6250 4100
+Wire Wire Line
+	6350 4100 6350 4150
+Wire Wire Line
+	6350 4450 6350 4400
+Connection ~ 6350 4400
+$Comp
+L 00-cool_stuff:Vcc #PWR0101
+U 1 1 5D080671
+P 6950 4000
+F 0 "#PWR0101" H 6950 3850 50  0001 C CNN
+F 1 "Vcc" H 6965 4173 50  0000 C CNN
+F 2 "" H 6950 4000 50  0001 C CNN
+F 3 "" H 6950 4000 50  0001 C CNN
+	1    6950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:Vee #PWR0102
+U 1 1 5D0812D6
+P 6950 4800
+F 0 "#PWR0102" H 6950 4900 50  0001 C CNN
+F 1 "Vee" H 6965 4973 50  0000 C CNN
+F 2 "" H 6950 4800 50  0001 C CNN
+F 3 "" H 6950 4800 50  0001 C CNN
+	1    6950 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6950 4800 6950 4700
+Connection ~ 6350 4700
+Wire Wire Line
+	6950 4100 6950 4000
+Connection ~ 6350 4100
+$Comp
+L 00-cool_stuff:0V #PWR0103
+U 1 1 5D084CC7
+P 7350 4500
+F 0 "#PWR0103" H 7350 4250 50  0001 C CNN
+F 1 "0V" H 7355 4327 50  0000 C CNN
+F 2 "" H 7350 4500 50  0001 C CNN
+F 3 "" H 7350 4500 50  0001 C CNN
+	1    7350 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 4500 7350 4400
+$Comp
+L power1-rescue:schottky-diode-00-cool_stuff D9
+U 1 1 5D087232
+P 6800 4250
+F 0 "D9" V 6846 4171 50  0000 R CNN
+F 1 "5819" V 6755 4171 50  0000 R CNN
+F 2 "00-Mine:diode-TH" H 6800 4250 50  0001 C CNN
+F 3 "~" H 6800 4250 50  0001 C CNN
+	1    6800 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power1-rescue:schottky-diode-00-cool_stuff D10
+U 1 1 5D0876F3
+P 6800 4550
+F 0 "D10" V 6846 4471 50  0000 R CNN
+F 1 "5819" V 6755 4471 50  0000 R CNN
+F 2 "00-Mine:diode-TH" H 6800 4550 50  0001 C CNN
+F 3 "~" H 6800 4550 50  0001 C CNN
+	1    6800 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C2
+U 1 1 5D08B3FE
+P 5200 4250
+F 0 "C2" V 5154 4342 50  0000 L CNN
+F 1 "100nF" V 5245 4342 50  0000 L CNN
+F 2 "00-Mine:capacitor-TH-2.54mm" V 5200 4250 50  0001 C CNN
+F 3 "~" V 5200 4250 50  0001 C CNN
+	1    5200 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C6
+U 1 1 5D08B80F
+P 5200 4550
+F 0 "C6" V 5154 4642 50  0000 L CNN
+F 1 "100nF" V 5245 4642 50  0000 L CNN
+F 2 "00-Mine:capacitor-TH-2.54mm" V 5200 4550 50  0001 C CNN
+F 3 "~" V 5200 4550 50  0001 C CNN
+	1    5200 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:diode D1
+U 1 1 5D093A7B
+P 5850 3650
+F 0 "D1" H 5850 3434 50  0000 C CNN
+F 1 "1n4004" H 5850 3525 50  0000 C CNN
+F 2 "00-Mine:diode-TH" H 5850 3650 50  0001 C CNN
+F 3 "~" H 5850 3650 50  0001 C CNN
+	1    5850 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 3650 5450 3650
+Wire Wire Line
+	5450 3650 5450 4100
+Connection ~ 5450 4100
+Wire Wire Line
+	5450 4100 5550 4100
+Wire Wire Line
+	6000 3650 6250 3650
+Wire Wire Line
+	6250 3650 6250 4100
+Connection ~ 6250 4100
+Wire Wire Line
+	6250 4100 6350 4100
+$Comp
+L 00-cool_stuff:diode D12
+U 1 1 5D099FDF
+P 5850 5300
+F 0 "D12" H 5850 5516 50  0000 C CNN
+F 1 "1n4004" H 5850 5425 50  0000 C CNN
+F 2 "00-Mine:diode-TH" H 5850 5300 50  0001 C CNN
+F 3 "~" H 5850 5300 50  0001 C CNN
+	1    5850 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 5300 5700 5300
+Wire Wire Line
+	6000 5300 6250 5300
+Wire Wire Line
+	5200 4700 5450 4700
+Wire Wire Line
+	6150 4700 6250 4700
+Wire Wire Line
+	6250 4700 6250 5300
+Connection ~ 6250 4700
+Wire Wire Line
+	6250 4700 6350 4700
+Wire Wire Line
+	5450 4700 5450 5300
+Connection ~ 5450 4700
+Wire Wire Line
+	5450 4700 5550 4700
+Wire Wire Line
+	4700 4450 4700 4400
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D0BF390
+P 5200 4100
+F 0 "#FLG0101" H 5200 4175 50  0001 C CNN
+F 1 "PWR_FLAG" H 5200 4273 50  0000 C CNN
+F 2 "" H 5200 4100 50  0001 C CNN
+F 3 "~" H 5200 4100 50  0001 C CNN
+	1    5200 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4700 4200 4700
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5D0C104E
+P 5200 4700
+F 0 "#FLG0102" H 5200 4775 50  0001 C CNN
+F 1 "PWR_FLAG" H 5200 4873 50  0000 C CNN
+F 2 "" H 5200 4700 50  0001 C CNN
+F 3 "~" H 5200 4700 50  0001 C CNN
+	1    5200 4700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4700 4700 5200 4700
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5D0D8D48
+P 7350 4400
+F 0 "#FLG0103" H 7350 4475 50  0001 C CNN
+F 1 "PWR_FLAG" H 7350 4573 50  0000 C CNN
+F 2 "" H 7350 4400 50  0001 C CNN
+F 3 "~" H 7350 4400 50  0001 C CNN
+	1    7350 4400
+	1    0    0    -1  
+$EndComp
+Connection ~ 7350 4400
+Wire Wire Line
+	6350 4700 6800 4700
+Wire Wire Line
+	6350 4100 6800 4100
+Wire Wire Line
+	6350 4400 6800 4400
+Connection ~ 6800 4400
+Wire Wire Line
+	6800 4400 7350 4400
+Connection ~ 6800 4700
+Wire Wire Line
+	6800 4700 6950 4700
+Connection ~ 6800 4100
+Wire Wire Line
+	6800 4100 6950 4100
+$Comp
+L 00-cool_stuff:78L0X U1
+U 1 1 5F07763D
+P 5850 4100
+F 0 "U1" H 5850 4342 50  0000 C CNN
+F 1 "78L09" H 5850 4251 50  0000 C CNN
+F 2 "00-Mine:TO-92_HandSolder" H 5850 4325 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78L05A.pdf" H 5850 4050 50  0001 C CNN
+	1    5850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:79L0X U2
+U 1 1 5F077D72
+P 5850 4700
+F 0 "U2" H 5850 4551 50  0000 C CNN
+F 1 "79L09" H 5850 4460 50  0000 C CNN
+F 2 "00-Mine:TO-92_HandSolder" H 5850 4500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm79l.pdf" H 5850 4700 50  0001 C CNN
+	1    5850 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4400 5850 4400
+Connection ~ 5850 4400
+Wire Wire Line
+	5850 4400 6350 4400
+$EndSCHEMATC

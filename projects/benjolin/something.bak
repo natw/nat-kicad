@@ -1,0 +1,498 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR?
+U 1 1 5CB31A68
+P 5250 1050
+F 0 "#PWR?" H 5250 900 50  0001 C CNN
+F 1 "+12V" H 5265 1223 50  0000 C CNN
+F 2 "" H 5250 1050 50  0001 C CNN
+F 3 "" H 5250 1050 50  0001 C CNN
+	1    5250 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1650 5350 1650
+$Comp
+L _cool_stuff:0V #PWR?
+U 1 1 5CB2E4E1
+P 5400 1650
+F 0 "#PWR?" H 5400 1400 50  0001 C CNN
+F 1 "0V" H 5405 1477 50  0000 C CNN
+F 2 "" H 5400 1650 50  0001 C CNN
+F 3 "" H 5400 1650 50  0001 C CNN
+	1    5400 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1650 5250 1650
+$Comp
+L power:-12V #PWR?
+U 1 1 5CB30880
+P 5200 1650
+F 0 "#PWR?" H 5200 1750 50  0001 C CNN
+F 1 "-12V" H 5215 1823 50  0000 C CNN
+F 2 "" H 5200 1650 50  0001 C CNN
+F 3 "" H 5200 1650 50  0001 C CNN
+	1    5200 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CB36F37
+P 4600 1350
+F 0 "R?" V 4500 1350 50  0000 C CNN
+F 1 "510R" V 4700 1350 50  0000 C CNN
+F 2 "" V 4640 1340 50  0001 C CNN
+F 3 "~" H 4600 1350 50  0001 C CNN
+	1    4600 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 1350 4850 1350
+Wire Wire Line
+	4250 1350 4450 1350
+$Comp
+L _cool_stuff:0V #PWR?
+U 1 1 5CB3B08E
+P 3900 1350
+F 0 "#PWR?" H 3900 1100 50  0001 C CNN
+F 1 "0V" V 3905 1222 50  0000 R CNN
+F 2 "" H 3900 1350 50  0001 C CNN
+F 3 "" H 3900 1350 50  0001 C CNN
+	1    3900 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 1350 4050 1350
+Wire Wire Line
+	4700 2150 4850 2150
+Wire Wire Line
+	4200 2150 4250 2150
+$Comp
+L power:+12V #PWR?
+U 1 1 5CB446A2
+P 3800 1900
+F 0 "#PWR?" H 3800 1750 50  0001 C CNN
+F 1 "+12V" H 3815 2073 50  0000 C CNN
+F 2 "" H 3800 1900 50  0001 C CNN
+F 3 "" H 3800 1900 50  0001 C CNN
+	1    3800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5CB44D2B
+P 3800 2400
+F 0 "#PWR?" H 3800 2500 50  0001 C CNN
+F 1 "-12V" H 3815 2573 50  0000 C CNN
+F 2 "" H 3800 2400 50  0001 C CNN
+F 3 "" H 3800 2400 50  0001 C CNN
+	1    3800 2400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 2250 3450 2250
+Wire Wire Line
+	3450 2250 3450 2800
+Wire Wire Line
+	3450 2800 3650 2800
+Wire Wire Line
+	4250 2150 4250 2800
+Wire Wire Line
+	4250 2800 3950 2800
+Connection ~ 4250 2150
+Wire Wire Line
+	4250 2150 4400 2150
+$Comp
+L Device:R_US R?
+U 1 1 5CB49374
+P 3800 3150
+F 0 "R?" V 3700 3150 50  0000 C CNN
+F 1 "10k" V 3900 3150 50  0000 C CNN
+F 2 "" V 3840 3140 50  0001 C CNN
+F 3 "~" H 3800 3150 50  0001 C CNN
+	1    3800 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 2800 3450 3150
+Wire Wire Line
+	3450 3150 3650 3150
+Connection ~ 3450 2800
+Wire Wire Line
+	3950 3150 4850 3150
+Wire Wire Line
+	4850 3150 4850 2150
+Connection ~ 4850 2150
+$Comp
+L Device:C_Small C?
+U 1 1 5CB39E76
+P 4150 1350
+F 0 "C?" V 4250 1350 50  0000 C CNN
+F 1 "560pF" V 4050 1350 50  0000 C CNN
+F 2 "" H 4150 1350 50  0001 C CNN
+F 3 "~" H 4150 1350 50  0001 C CNN
+	1    4150 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L _cool_stuff:TL072 U?
+U 1 1 5CB57442
+P 3900 2150
+F 0 "U?" H 3900 2300 50  0000 L CNN
+F 1 "TL072" H 3900 2000 50  0000 L CNN
+F 2 "" H 3900 2150 50  0001 C CNN
+F 3 "" H 3900 2150 50  0001 C CNN
+	1    3900 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5CB47E0F
+P 3800 2800
+F 0 "D?" H 3800 2700 50  0000 C CNN
+F 1 "1n4149" H 3800 2900 50  0000 C CNN
+F 2 "" H 3800 2800 50  0001 C CNN
+F 3 "~" H 3800 2800 50  0001 C CNN
+	1    3800 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L _cool_stuff:diode D?
+U 1 1 5CB54EAC
+P 4550 2150
+F 0 "D?" H 4550 2250 50  0000 C CNN
+F 1 "1n4149" H 4550 2050 50  0000 C CNN
+F 2 "" H 4550 2150 50  0001 C CNN
+F 3 "~" H 4550 2150 50  0001 C CNN
+	1    4550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L _cool_stuff:0V #PWR?
+U 1 1 5CB5B319
+P 3100 2000
+F 0 "#PWR?" H 3100 1750 50  0001 C CNN
+F 1 "0V" H 3100 1850 50  0000 C CNN
+F 2 "" H 3100 2000 50  0001 C CNN
+F 3 "" H 3100 2000 50  0001 C CNN
+	1    3100 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L _cool_stuff:trimpot RV?
+U 1 1 5CB5CD25
+P 2500 1950
+F 0 "RV?" V 2325 1950 50  0000 C CNN
+F 1 "10k" V 2400 1950 50  0000 C CNN
+F 2 "" H 2500 1950 50  0001 C CNN
+F 3 "~" H 2500 1950 50  0001 C CNN
+	1    2500 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 1950 3100 2000
+Wire Wire Line
+	3100 1950 3550 1950
+Wire Wire Line
+	3550 1950 3550 2050
+Wire Wire Line
+	3550 2050 3600 2050
+Wire Wire Line
+	2650 1950 3100 1950
+Connection ~ 3100 1950
+Wire Wire Line
+	2500 2100 2500 2250
+Wire Wire Line
+	2500 2250 2650 2250
+Wire Wire Line
+	2950 2250 3450 2250
+Connection ~ 3450 2250
+Text HLabel 1550 1950 0    50   Input ~ 0
+RUNGLER_CV
+Wire Wire Line
+	1550 1950 2350 1950
+$Comp
+L _cool_stuff:resistor R?
+U 1 1 5CB64F41
+P 3100 2800
+F 0 "R?" H 3000 2900 50  0000 C CNN
+F 1 "30k" H 3000 2700 50  0000 C CNN
+F 2 "" H 3010 2840 50  0001 C CNN
+F 3 "~" V 3000 2800 50  0001 C CNN
+	1    3100 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2800 3450 2800
+$Comp
+L _cool_stuff:resistor R?
+U 1 1 5CB6669A
+P 2900 2250
+F 0 "R?" H 2800 2350 50  0000 C CNN
+F 1 "51k" H 2800 2150 50  0000 C CNN
+F 2 "" H 2810 2290 50  0001 C CNN
+F 3 "~" V 2800 2250 50  0001 C CNN
+	1    2900 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L _cool_stuff:trimpot RV?
+U 1 1 5CB69749
+P 2500 2800
+F 0 "RV?" H 2432 2846 50  0000 R CNN
+F 1 "10k" H 2432 2755 50  0000 R CNN
+F 2 "" H 2500 2800 50  0001 C CNN
+F 3 "~" H 2500 2800 50  0001 C CNN
+	1    2500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L _cool_stuff:0V #PWR?
+U 1 1 5CB6C5FE
+P 2500 3050
+F 0 "#PWR?" H 2500 2800 50  0001 C CNN
+F 1 "0V" H 2505 2877 50  0000 C CNN
+F 2 "" H 2500 3050 50  0001 C CNN
+F 3 "" H 2500 3050 50  0001 C CNN
+	1    2500 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3050 2500 2950
+$Comp
+L power:-12V #PWR?
+U 1 1 5CB6D229
+P 2500 2550
+F 0 "#PWR?" H 2500 2650 50  0001 C CNN
+F 1 "-12V" H 2515 2723 50  0000 C CNN
+F 2 "" H 2500 2550 50  0001 C CNN
+F 3 "" H 2500 2550 50  0001 C CNN
+	1    2500 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2550 2500 2650
+Wire Wire Line
+	2650 2800 2850 2800
+Wire Wire Line
+	5250 1650 5250 1600
+Wire Wire Line
+	5350 1650 5350 1600
+Wire Wire Line
+	5250 1050 5250 1100
+Wire Wire Line
+	4850 1600 4850 2150
+$Comp
+L _cool_stuff:cap_small C?
+U 1 1 5CB85B50
+P 6000 1350
+F 0 "C?" H 6000 1579 50  0000 C CNN
+F 1 "1nF" H 6000 1488 50  0000 C CNN
+F 2 "" V 6000 1350 50  0001 C CNN
+F 3 "~" V 6000 1350 50  0001 C CNN
+	1    6000 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L _cool_stuff:resistor R?
+U 1 1 5CB86A4E
+P 6900 1350
+F 0 "R?" H 6800 1555 50  0000 C CNN
+F 1 "15k" H 6800 1464 50  0000 C CNN
+F 2 "" H 6810 1390 50  0001 C CNN
+F 3 "~" V 6800 1350 50  0001 C CNN
+	1    6900 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L _cool_stuff:resistor R?
+U 1 1 5CB86FAB
+P 7700 1350
+F 0 "R?" H 7600 1555 50  0000 C CNN
+F 1 "30k" H 7600 1464 50  0000 C CNN
+F 2 "" H 7610 1390 50  0001 C CNN
+F 3 "~" V 7600 1350 50  0001 C CNN
+	1    7700 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 1350 5900 1350
+$Comp
+L _cool_stuff:TL074 U?
+U 1 1 5CB89EB9
+P 6150 2200
+F 0 "U?" H 6250 2300 50  0000 L CNN
+F 1 "TL074" H 6250 2100 50  0000 L CNN
+F 2 "" H 6100 2300 50  0001 C CNN
+F 3 "" H 6200 2400 50  0001 C CNN
+	1    6150 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2550 6050 2500
+Wire Wire Line
+	6050 1850 6050 1900
+$Comp
+L power:-12V #PWR?
+U 1 1 5CB8D22C
+P 6050 2550
+F 0 "#PWR?" H 6050 2650 50  0001 C CNN
+F 1 "-12V" H 6065 2723 50  0000 C CNN
+F 2 "" H 6050 2550 50  0001 C CNN
+F 3 "" H 6050 2550 50  0001 C CNN
+	1    6050 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5CB8B4F6
+P 6050 1850
+F 0 "#PWR?" H 6050 1700 50  0001 C CNN
+F 1 "+12V" H 6065 2023 50  0000 C CNN
+F 2 "" H 6050 1850 50  0001 C CNN
+F 3 "" H 6050 1850 50  0001 C CNN
+	1    6050 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4ms-ic:V2164 U?
+U 1 1 5CB2CCDA
+P 5350 1350
+F 0 "U?" H 5450 1500 60  0000 L CNN
+F 1 "V2164" H 5450 1200 60  0000 L CNN
+F 2 "" H 5350 1350 60  0000 C CNN
+F 3 "" H 5350 1350 60  0000 C CNN
+	1    5350 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 2300 5750 2300
+Wire Wire Line
+	5750 2300 5750 1350
+Connection ~ 5750 1350
+$Comp
+L _cool_stuff:0V #PWR?
+U 1 1 5CB98299
+P 5850 2050
+F 0 "#PWR?" H 5850 1800 50  0001 C CNN
+F 1 "0V" H 5855 1877 50  0000 C CNN
+F 2 "" H 5850 2050 50  0001 C CNN
+F 3 "" H 5850 2050 50  0001 C CNN
+	1    5850 2050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 2050 5850 2100
+Wire Wire Line
+	6100 1350 6500 1350
+Wire Wire Line
+	6450 2200 6500 2200
+Wire Wire Line
+	6500 2200 6500 1350
+Connection ~ 6500 1350
+Wire Wire Line
+	6500 1350 6650 1350
+$Comp
+L _cool_stuff:TL074 U?
+U 1 1 5CBA11FC
+P 7650 2200
+F 0 "U?" H 7750 2300 50  0000 L CNN
+F 1 "TL074" H 7750 2100 50  0000 L CNN
+F 2 "" H 7600 2300 50  0001 C CNN
+F 3 "" H 7700 2400 50  0001 C CNN
+	1    7650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5CBA4CEA
+P 7550 1900
+F 0 "#PWR?" H 7550 1750 50  0001 C CNN
+F 1 "+12V" H 7565 2073 50  0000 C CNN
+F 2 "" H 7550 1900 50  0001 C CNN
+F 3 "" H 7550 1900 50  0001 C CNN
+	1    7550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5CBA5571
+P 7550 2500
+F 0 "#PWR?" H 7550 2600 50  0001 C CNN
+F 1 "-12V" H 7565 2673 50  0000 C CNN
+F 2 "" H 7550 2500 50  0001 C CNN
+F 3 "" H 7550 2500 50  0001 C CNN
+	1    7550 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L _cool_stuff:0V #PWR?
+U 1 1 5CBA5C20
+P 7300 2350
+F 0 "#PWR?" H 7300 2100 50  0001 C CNN
+F 1 "0V" H 7305 2177 50  0000 C CNN
+F 2 "" H 7300 2350 50  0001 C CNN
+F 3 "" H 7300 2350 50  0001 C CNN
+	1    7300 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2300 7300 2300
+Wire Wire Line
+	7300 2300 7300 2350
+Wire Wire Line
+	6950 1350 7100 1350
+Wire Wire Line
+	7100 1350 7100 2100
+Wire Wire Line
+	7100 2100 7350 2100
+Connection ~ 7100 1350
+Wire Wire Line
+	7100 1350 7450 1350
+Wire Wire Line
+	7950 2200 8150 2200
+Wire Wire Line
+	8150 2200 8150 1350
+Wire Wire Line
+	8150 1350 7750 1350
+$Comp
+L _cool_stuff:resistor R?
+U 1 1 5CBAA5C1
+P 6750 700
+F 0 "R?" H 6650 800 50  0000 C CNN
+F 1 "100k" H 6650 600 50  0000 C CNN
+F 2 "" H 6660 740 50  0001 C CNN
+F 3 "~" V 6650 700 50  0001 C CNN
+	1    6750 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 700  4850 700 
+Wire Wire Line
+	4850 700  4850 1350
+Connection ~ 4850 1350
+Wire Wire Line
+	6800 700  8150 700 
+Wire Wire Line
+	8150 700  8150 1350
+Connection ~ 8150 1350
+Text HLabel 8500 1350 2    50   Input ~ 0
+P1
+Wire Wire Line
+	8150 1350 8500 1350
+$EndSCHEMATC

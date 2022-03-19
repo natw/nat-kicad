@@ -9,10 +9,10 @@
 	url = git@github.com:Digi-Key/digikey-kicad-library.git
 [submodule "external/kicad-footprints"]
 	path = external/kicad-footprints
-	url = git@github.com:KiCad/kicad-footprints.git
+	url = https://gitlab.com/kicad/libraries/kicad-footprints.git
 [submodule "external/kicad-symbols"]
 	path = external/kicad-symbols
-	url = git@github.com:KiCad/kicad-symbols.git
+	url = https://gitlab.com/kicad/libraries/kicad-symbols.git
 [submodule "plugins/InteractiveHtmlBom"]
 	path = plugins/InteractiveHtmlBom
 	url = git@github.com:openscopeproject/InteractiveHtmlBom.git

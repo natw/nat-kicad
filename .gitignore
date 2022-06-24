@@ -1,2 +1,2 @@
-projects/*/*-backups/*.zip
+projects/**/*-backups/*.zip
 *.bck

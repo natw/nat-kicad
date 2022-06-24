@@ -1,0 +1,1804 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A1 33110 23386
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 2700 5850 0    50   Input ~ 0
+SIGNAL_IN
+$Comp
+L 00-cool_stuff:resistor R25
+U 1 1 5E036525
+P 2900 6200
+F 0 "R25" V 2754 6268 50  0000 L CNN
+F 1 "1M" V 2845 6268 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 2810 6240 50  0001 C CNN
+F 3 "~" V 2800 6200 50  0001 C CNN
+	1    2900 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0101
+U 1 1 5E037C4A
+P 2900 6350
+F 0 "#PWR0101" H 2900 6100 50  0001 C CNN
+F 1 "0V" H 2905 6177 50  0000 C CNN
+F 2 "" H 2900 6350 50  0001 C CNN
+F 3 "" H 2900 6350 50  0001 C CNN
+	1    2900 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 6350 2900 6250
+Wire Wire Line
+	2700 5850 2900 5850
+Wire Wire Line
+	2900 5850 2900 5950
+$Comp
+L 00-cool_stuff:cap_small C12
+U 1 1 5E0389F3
+P 3200 5850
+F 0 "C12" H 3200 6079 50  0000 C CNN
+F 1 "22n" H 3200 5988 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 3200 5850 50  0001 C CNN
+F 3 "~" V 3200 5850 50  0001 C CNN
+	1    3200 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 5850 2900 5850
+Connection ~ 2900 5850
+$Comp
+L 00-cool_stuff:resistor R14
+U 1 1 5E03911F
+P 3500 5500
+F 0 "R14" V 3354 5568 50  0000 L CNN
+F 1 "470k" V 3445 5568 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 3410 5540 50  0001 C CNN
+F 3 "~" V 3400 5500 50  0001 C CNN
+	1    3500 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:+4.5V #PWR0102
+U 1 1 5E039DC8
+P 3500 5150
+F 0 "#PWR0102" H 3500 5000 50  0001 C CNN
+F 1 "+4.5V" H 3515 5323 50  0000 C CNN
+F 2 "" H 3500 5150 50  0001 C CNN
+F 3 "" H 3500 5150 50  0001 C CNN
+	1    3500 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5150 3500 5250
+Wire Wire Line
+	3500 5550 3500 5850
+Wire Wire Line
+	3500 5850 3300 5850
+$Comp
+L 00-cool_stuff:resistor R21
+U 1 1 5E03A564
+P 3700 5850
+F 0 "R21" H 3600 5645 50  0000 C CNN
+F 1 "10k" H 3600 5736 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 3610 5890 50  0001 C CNN
+F 3 "~" V 3600 5850 50  0001 C CNN
+	1    3700 5850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 5850 3500 5850
+Connection ~ 3500 5850
+$Comp
+L 00-cool_stuff:cap_small C17
+U 1 1 5E03AFF2
+P 4100 6100
+F 0 "C17" V 4054 6192 50  0000 L CNN
+F 1 "100p" V 4145 6192 50  0000 L CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 4100 6100 50  0001 C CNN
+F 3 "~" V 4100 6100 50  0001 C CNN
+	1    4100 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0103
+U 1 1 5E03B542
+P 4100 6350
+F 0 "#PWR0103" H 4100 6100 50  0001 C CNN
+F 1 "0V" H 4105 6177 50  0000 C CNN
+F 2 "" H 4100 6350 50  0001 C CNN
+F 3 "" H 4100 6350 50  0001 C CNN
+	1    4100 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 6350 4100 6200
+Wire Wire Line
+	3950 5850 4100 5850
+Wire Wire Line
+	4100 5850 4100 6000
+$Comp
+L 00-cool_stuff:TL072-separate U1
+U 1 1 5E03BE4C
+P 5000 5750
+F 0 "U1" H 5000 6117 50  0000 C CNN
+F 1 "TL072-separate" H 5000 6026 50  0000 C CNN
+F 2 "00-Mine:DIP-8" H 5000 5750 50  0001 C CNN
+F 3 "" H 5000 5750 50  0001 C CNN
+	1    5000 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 5850 4700 5850
+Connection ~ 4100 5850
+$Comp
+L 00-cool_stuff:resistor R11
+U 1 1 5E03CDBD
+P 4900 5200
+F 0 "R11" H 4800 4995 50  0000 C CNN
+F 1 "82k" H 4800 5086 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4810 5240 50  0001 C CNN
+F 3 "~" V 4800 5200 50  0001 C CNN
+	1    4900 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5150 5200 5400 5200
+Wire Wire Line
+	5400 5200 5400 5750
+Wire Wire Line
+	5400 5750 5300 5750
+Wire Wire Line
+	4850 5200 4550 5200
+Wire Wire Line
+	4550 5200 4550 5650
+$Comp
+L 00-cool_stuff:0V #PWR0104
+U 1 1 5E03EB8B
+P 4550 6350
+F 0 "#PWR0104" H 4550 6100 50  0001 C CNN
+F 1 "0V" H 4555 6177 50  0000 C CNN
+F 2 "" H 4550 6350 50  0001 C CNN
+F 3 "" H 4550 6350 50  0001 C CNN
+	1    4550 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R26
+U 1 1 5E03F3DE
+P 4550 6200
+F 0 "R26" V 4404 6268 50  0000 L CNN
+F 1 "47k" V 4495 6268 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4460 6240 50  0001 C CNN
+F 3 "~" V 4450 6200 50  0001 C CNN
+	1    4550 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 5650 4700 5650
+Wire Wire Line
+	4550 5950 4550 5650
+Connection ~ 4550 5650
+Wire Wire Line
+	4550 6250 4550 6350
+$Comp
+L 00-cool_stuff:cap_small C11
+U 1 1 5E04062A
+P 5700 5750
+F 0 "C11" H 5700 5521 50  0000 C CNN
+F 1 "2n2" H 5700 5612 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 5700 5750 50  0001 C CNN
+F 3 "~" V 5700 5750 50  0001 C CNN
+	1    5700 5750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5600 5750 5400 5750
+Connection ~ 5400 5750
+$Comp
+L 00-cool_stuff:resistor R15
+U 1 1 5E040DB0
+P 6100 5550
+F 0 "R15" V 5954 5618 50  0000 L CNN
+F 1 "33k" V 6045 5618 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 6010 5590 50  0001 C CNN
+F 3 "~" V 6000 5550 50  0001 C CNN
+	1    6100 5550
+	0    1    1    0   
+$EndComp
+Text GLabel 6000 5150 0    50   Input ~ 0
+VREF_B
+Wire Wire Line
+	6100 5300 6100 5150
+Wire Wire Line
+	6100 5150 6000 5150
+Wire Wire Line
+	5800 5750 6100 5750
+Wire Wire Line
+	6100 5750 6100 5600
+$Comp
+L 00-cool_stuff:resistor R18
+U 1 1 5E041D85
+P 6400 5750
+F 0 "R18" H 6300 5545 50  0000 C CNN
+F 1 "10k" H 6300 5636 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 6310 5790 50  0001 C CNN
+F 3 "~" V 6300 5750 50  0001 C CNN
+	1    6400 5750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 5750 6100 5750
+Connection ~ 6100 5750
+$Comp
+L 00-cool_stuff:cap_small C16
+U 1 1 5E0428FC
+P 6800 5950
+F 0 "C16" V 6754 6042 50  0000 L CNN
+F 1 "1n" V 6845 6042 50  0000 L CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 6800 5950 50  0001 C CNN
+F 3 "~" V 6800 5950 50  0001 C CNN
+	1    6800 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0105
+U 1 1 5E042E82
+P 6800 6150
+F 0 "#PWR0105" H 6800 5900 50  0001 C CNN
+F 1 "0V" H 6805 5977 50  0000 C CNN
+F 2 "" H 6800 6150 50  0001 C CNN
+F 3 "" H 6800 6150 50  0001 C CNN
+	1    6800 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 5850 6800 5750
+Wire Wire Line
+	6800 5750 6650 5750
+Wire Wire Line
+	6800 6150 6800 6050
+$Comp
+L 00-cool_stuff:TL072-separate U3
+U 2 1 5E0448B7
+P 7750 5650
+F 0 "U3" H 7750 6017 50  0000 C CNN
+F 1 "TL072-separate" H 7750 5926 50  0000 C CNN
+F 2 "00-Mine:DIP-8" H 7750 5650 50  0001 C CNN
+F 3 "" H 7750 5650 50  0001 C CNN
+	2    7750 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C8
+U 1 1 5E046451
+P 7750 5100
+F 0 "C8" H 7750 4871 50  0000 C CNN
+F 1 "100p" H 7750 4962 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 7750 5100 50  0001 C CNN
+F 3 "~" V 7750 5100 50  0001 C CNN
+	1    7750 5100
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R9
+U 1 1 5E04782A
+P 7350 4550
+F 0 "R9" H 7250 4345 50  0000 C CNN
+F 1 "56k" H 7250 4436 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 7260 4590 50  0001 C CNN
+F 3 "~" V 7250 4550 50  0001 C CNN
+	1    7350 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:potentiometer RV1
+U 1 1 5E0481A6
+P 8050 4550
+F 0 "RV1" V 7755 4550 50  0000 C CNN
+F 1 "B1M" V 7846 4550 50  0000 C CNN
+F 2 "" H 8050 4550 50  0001 C CNN
+F 3 "~" H 8050 4550 50  0001 C CNN
+F 4 "Gain" V 7937 4550 50  0000 C CNN "Label"
+	1    8050 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7900 4550 7850 4550
+Wire Wire Line
+	8050 4700 8050 4750
+Wire Wire Line
+	8050 4750 7850 4750
+Wire Wire Line
+	7850 4750 7850 4550
+Connection ~ 7850 4550
+Wire Wire Line
+	7850 4550 7600 4550
+Wire Wire Line
+	8200 4550 8400 4550
+Wire Wire Line
+	8400 5650 8050 5650
+Wire Wire Line
+	7300 4550 7150 4550
+Wire Wire Line
+	7150 4550 7150 5100
+Wire Wire Line
+	7150 5550 7450 5550
+Wire Wire Line
+	6800 5750 7450 5750
+Connection ~ 6800 5750
+Wire Wire Line
+	7650 5100 7150 5100
+Connection ~ 7150 5100
+Wire Wire Line
+	7150 5100 7150 5550
+Wire Wire Line
+	7850 5100 8400 5100
+Wire Wire Line
+	8400 5100 8400 5650
+$Comp
+L 00-cool_stuff:switch-spdt SW1
+U 1 1 5E0506C3
+P 6550 4100
+F 0 "SW1" H 6550 4385 50  0000 C CNN
+F 1 "spdt" H 6550 4294 50  0001 C CNN
+F 2 "" H 6550 4100 50  0001 C CNN
+F 3 "~" H 6550 4100 50  0001 C CNN
+F 4 "gain hi/low" H 6550 4294 50  0000 C CNN "Label"
+	1    6550 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R8
+U 1 1 5E05321F
+P 6500 4550
+F 0 "R8" H 6400 4345 50  0000 C CNN
+F 1 "33k" H 6400 4436 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 6410 4590 50  0001 C CNN
+F 3 "~" V 6400 4550 50  0001 C CNN
+	1    6500 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6750 4100 7150 4100
+Wire Wire Line
+	7150 4100 7150 4550
+Connection ~ 7150 4550
+Wire Wire Line
+	7150 4550 6750 4550
+$Comp
+L 00-cool_stuff:resistor R3
+U 1 1 5E0552D6
+P 6000 4000
+F 0 "R3" H 5900 3795 50  0000 C CNN
+F 1 "33k" H 5900 3886 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 5910 4040 50  0001 C CNN
+F 3 "~" V 5900 4000 50  0001 C CNN
+	1    6000 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R4
+U 1 1 5E055C7D
+P 6000 4200
+F 0 "R4" H 5900 4313 50  0000 C CNN
+F 1 "10k" H 5900 4404 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 5910 4240 50  0001 C CNN
+F 3 "~" V 5900 4200 50  0001 C CNN
+	1    6000 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6250 4200 6350 4200
+Wire Wire Line
+	6350 4000 6250 4000
+Wire Wire Line
+	6450 4550 5800 4550
+Wire Wire Line
+	5800 4550 5800 4200
+Wire Wire Line
+	5800 4000 5950 4000
+Wire Wire Line
+	5950 4200 5800 4200
+Connection ~ 5800 4200
+Wire Wire Line
+	5800 4200 5800 4000
+$Comp
+L 00-cool_stuff:cap_small C1
+U 1 1 5E059229
+P 5550 4200
+F 0 "C1" H 5550 3971 50  0000 C CNN
+F 1 "220n" H 5550 4062 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 5550 4200 50  0001 C CNN
+F 3 "~" V 5550 4200 50  0001 C CNN
+	1    5550 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5650 4200 5800 4200
+$Comp
+L 00-cool_stuff:0V #PWR0106
+U 1 1 5E05A6AB
+P 5300 4300
+F 0 "#PWR0106" H 5300 4050 50  0001 C CNN
+F 1 "0V" H 5305 4127 50  0000 C CNN
+F 2 "" H 5300 4300 50  0001 C CNN
+F 3 "" H 5300 4300 50  0001 C CNN
+	1    5300 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4300 5300 4200
+Wire Wire Line
+	5300 4200 5450 4200
+Wire Wire Line
+	8400 4550 8400 5100
+Connection ~ 8400 5100
+$Comp
+L 00-cool_stuff:cap_small C10
+U 1 1 5E05D84E
+P 8650 5650
+F 0 "C10" H 8650 5421 50  0000 C CNN
+F 1 "22n" H 8650 5512 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 8650 5650 50  0001 C CNN
+F 3 "~" V 8650 5650 50  0001 C CNN
+	1    8650 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R17
+U 1 1 5E05DCD7
+P 8950 5650
+F 0 "R17" H 8850 5445 50  0000 C CNN
+F 1 "22k" H 8850 5536 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 8860 5690 50  0001 C CNN
+F 3 "~" V 8850 5650 50  0001 C CNN
+	1    8950 5650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8900 5650 8750 5650
+Wire Wire Line
+	8550 5650 8400 5650
+Connection ~ 8400 5650
+$Comp
+L 00-cool_stuff:TL072-separate U4
+U 2 1 5E06056B
+P 10250 5750
+F 0 "U4" H 10250 6117 50  0000 C CNN
+F 1 "TL072-separate" H 10250 6026 50  0000 C CNN
+F 2 "00-Mine:DIP-8" H 10250 5750 50  0001 C CNN
+F 3 "" H 10250 5750 50  0001 C CNN
+	2    10250 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R12
+U 1 1 5E0633D3
+P 10150 5200
+F 0 "R12" H 10050 4995 50  0000 C CNN
+F 1 "56k" H 10050 5086 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 10060 5240 50  0001 C CNN
+F 3 "~" V 10050 5200 50  0001 C CNN
+	1    10150 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C4
+U 1 1 5E063D5D
+P 10250 4850
+F 0 "C4" H 10250 4621 50  0000 C CNN
+F 1 "100p" H 10250 4712 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 10250 4850 50  0001 C CNN
+F 3 "~" V 10250 4850 50  0001 C CNN
+	1    10250 4850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9200 5650 9650 5650
+$Comp
+L 00-cool_stuff:diode2 D3
+U 1 1 5E067CBB
+P 10000 4400
+F 0 "D3" H 10000 4637 60  0000 C CNN
+F 1 "4148" H 10000 4531 60  0000 C CNN
+F 2 "digikey-footprints:SOD-123" H 10200 4600 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 10200 4700 60  0001 L CNN
+F 4 "1N4148W-FDICT-ND" H 10200 4800 60  0001 L CNN "Digi-Key_PN"
+F 5 "1N4148W-7-F" H 10200 4900 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 10200 5000 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Single" H 10200 5100 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 10200 5200 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" H 10200 5300 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE GEN PURP 100V 300MA SOD123" H 10200 5400 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 10200 5500 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10200 5600 60  0001 L CNN "Status"
+	1    10000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:diode2 D4
+U 1 1 5E068620
+P 10500 4400
+F 0 "D4" H 10500 4637 60  0000 C CNN
+F 1 "4148" H 10500 4531 60  0000 C CNN
+F 2 "digikey-footprints:SOD-123" H 10700 4600 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 10700 4700 60  0001 L CNN
+F 4 "1N4148W-FDICT-ND" H 10700 4800 60  0001 L CNN "Digi-Key_PN"
+F 5 "1N4148W-7-F" H 10700 4900 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 10700 5000 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Single" H 10700 5100 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 10700 5200 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" H 10700 5300 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE GEN PURP 100V 300MA SOD123" H 10700 5400 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 10700 5500 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10700 5600 60  0001 L CNN "Status"
+	1    10500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:diode2 D1
+U 1 1 5E06A7C4
+P 10000 4000
+F 0 "D1" H 10000 4237 60  0000 C CNN
+F 1 "4148" H 10000 4131 60  0000 C CNN
+F 2 "digikey-footprints:SOD-123" H 10200 4200 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 10200 4300 60  0001 L CNN
+F 4 "1N4148W-FDICT-ND" H 10200 4400 60  0001 L CNN "Digi-Key_PN"
+F 5 "1N4148W-7-F" H 10200 4500 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 10200 4600 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Single" H 10200 4700 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 10200 4800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" H 10200 4900 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE GEN PURP 100V 300MA SOD123" H 10200 5000 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 10200 5100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10200 5200 60  0001 L CNN "Status"
+	1    10000 4000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:diode2 D2
+U 1 1 5E06ACD4
+P 10500 4000
+F 0 "D2" H 10500 4237 60  0000 C CNN
+F 1 "4148" H 10500 4131 60  0000 C CNN
+F 2 "digikey-footprints:SOD-123" H 10700 4200 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 10700 4300 60  0001 L CNN
+F 4 "1N4148W-FDICT-ND" H 10700 4400 60  0001 L CNN "Digi-Key_PN"
+F 5 "1N4148W-7-F" H 10700 4500 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 10700 4600 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Single" H 10700 4700 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 10700 4800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" H 10700 4900 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE GEN PURP 100V 300MA SOD123" H 10700 5000 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 10700 5100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10700 5200 60  0001 L CNN "Status"
+	1    10500 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 4400 10300 4400
+Wire Wire Line
+	10300 4000 10200 4000
+Wire Wire Line
+	9800 4000 9650 4000
+Wire Wire Line
+	9650 4000 9650 4400
+Connection ~ 9650 5650
+Wire Wire Line
+	9650 5650 9950 5650
+Wire Wire Line
+	10700 4000 10850 4000
+Wire Wire Line
+	10850 4000 10850 4400
+Wire Wire Line
+	10850 5750 10550 5750
+Wire Wire Line
+	10700 4400 10850 4400
+Connection ~ 10850 4400
+Wire Wire Line
+	10850 4400 10850 4850
+Wire Wire Line
+	9800 4400 9650 4400
+Connection ~ 9650 4400
+Wire Wire Line
+	9650 4400 9650 4850
+Wire Wire Line
+	10150 4850 9650 4850
+Connection ~ 9650 4850
+Wire Wire Line
+	9650 4850 9650 5200
+Wire Wire Line
+	10350 4850 10850 4850
+Connection ~ 10850 4850
+Wire Wire Line
+	10850 4850 10850 5200
+Wire Wire Line
+	10400 5200 10850 5200
+Connection ~ 10850 5200
+Wire Wire Line
+	10850 5200 10850 5750
+Wire Wire Line
+	10100 5200 9650 5200
+Connection ~ 9650 5200
+Wire Wire Line
+	9650 5200 9650 5650
+$Comp
+L 00-cool_stuff:resistor R19
+U 1 1 5E078DE3
+P 11150 5750
+F 0 "R19" H 11050 5545 50  0000 C CNN
+F 1 "4k7" H 11050 5636 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 11060 5790 50  0001 C CNN
+F 3 "~" V 11050 5750 50  0001 C CNN
+	1    11150 5750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11100 5750 10850 5750
+Connection ~ 10850 5750
+Text GLabel 9650 5850 0    50   Input ~ 0
+VREF_B
+Wire Wire Line
+	9650 5850 9950 5850
+$Comp
+L 00-cool_stuff:TL072-separate U5
+U 2 1 5E07C8B5
+P 12200 5850
+F 0 "U5" H 12200 6217 50  0000 C CNN
+F 1 "TL072-separate" H 12200 6126 50  0000 C CNN
+F 2 "00-Mine:DIP-8" H 12200 5850 50  0001 C CNN
+F 3 "" H 12200 5850 50  0001 C CNN
+	2    12200 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11400 5750 11800 5750
+$Comp
+L 00-cool_stuff:resistor R13
+U 1 1 5E0807D5
+P 12100 5350
+F 0 "R13" H 12000 5145 50  0000 C CNN
+F 1 "82k" H 12000 5236 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 12010 5390 50  0001 C CNN
+F 3 "~" V 12000 5350 50  0001 C CNN
+	1    12100 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C7
+U 1 1 5E081059
+P 12200 4950
+F 0 "C7" H 12200 4721 50  0000 C CNN
+F 1 "100p" H 12200 4812 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 12200 4950 50  0001 C CNN
+F 3 "~" V 12200 4950 50  0001 C CNN
+	1    12200 4950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	12100 4950 11800 4950
+Wire Wire Line
+	11800 4950 11800 5350
+Connection ~ 11800 5750
+Wire Wire Line
+	11800 5750 11900 5750
+Wire Wire Line
+	12300 4950 12650 4950
+Wire Wire Line
+	12650 4950 12650 5350
+Wire Wire Line
+	12650 5850 12500 5850
+Wire Wire Line
+	12350 5350 12650 5350
+Connection ~ 12650 5350
+Wire Wire Line
+	12650 5350 12650 5850
+Wire Wire Line
+	12050 5350 11800 5350
+Connection ~ 11800 5350
+Wire Wire Line
+	11800 5350 11800 5750
+Text GLabel 11650 5950 0    50   Input ~ 0
+VREF_B
+Wire Wire Line
+	11650 5950 11900 5950
+$Comp
+L 00-cool_stuff:cap_small C13
+U 1 1 5E08B828
+P 12950 5850
+F 0 "C13" H 12950 5621 50  0000 C CNN
+F 1 "22n" H 12950 5712 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 12950 5850 50  0001 C CNN
+F 3 "~" V 12950 5850 50  0001 C CNN
+	1    12950 5850
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R22
+U 1 1 5E08BC9A
+P 13250 5850
+F 0 "R22" H 13150 5645 50  0000 C CNN
+F 1 "4k7" H 13150 5736 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 13160 5890 50  0001 C CNN
+F 3 "~" V 13150 5850 50  0001 C CNN
+	1    13250 5850
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C18
+U 1 1 5E08C4B0
+P 13700 6100
+F 0 "C18" V 13746 6008 50  0000 R CNN
+F 1 "10n" V 13655 6008 50  0000 R CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 13700 6100 50  0001 C CNN
+F 3 "~" V 13700 6100 50  0001 C CNN
+	1    13700 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5E08D360
+P 14100 6150
+F 0 "D5" V 14047 6228 50  0000 L CNN
+F 1 "LED" V 14138 6228 50  0000 L CNN
+F 2 "" H 14100 6150 50  0001 C CNN
+F 3 "~" H 14100 6150 50  0001 C CNN
+	1    14100 6150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5E08E71A
+P 14450 6150
+F 0 "D6" V 14489 6033 50  0000 R CNN
+F 1 "LED" V 14398 6033 50  0000 R CNN
+F 2 "" H 14450 6150 50  0001 C CNN
+F 3 "~" H 14450 6150 50  0001 C CNN
+	1    14450 6150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	13500 5850 13700 5850
+Wire Wire Line
+	14450 5850 14450 6000
+Wire Wire Line
+	14100 6000 14100 5850
+Connection ~ 14100 5850
+Wire Wire Line
+	14100 5850 14450 5850
+Wire Wire Line
+	13700 6000 13700 5850
+Connection ~ 13700 5850
+Wire Wire Line
+	13700 5850 14100 5850
+Wire Wire Line
+	13200 5850 13050 5850
+Wire Wire Line
+	12850 5850 12650 5850
+Connection ~ 12650 5850
+$Comp
+L 00-cool_stuff:0V #PWR0107
+U 1 1 5E09AACD
+P 13700 6450
+F 0 "#PWR0107" H 13700 6200 50  0001 C CNN
+F 1 "0V" H 13705 6277 50  0000 C CNN
+F 2 "" H 13700 6450 50  0001 C CNN
+F 3 "" H 13700 6450 50  0001 C CNN
+	1    13700 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13700 6450 13700 6200
+$Comp
+L 00-cool_stuff:0V #PWR0108
+U 1 1 5E09D375
+P 14100 6450
+F 0 "#PWR0108" H 14100 6200 50  0001 C CNN
+F 1 "0V" H 14105 6277 50  0000 C CNN
+F 2 "" H 14100 6450 50  0001 C CNN
+F 3 "" H 14100 6450 50  0001 C CNN
+	1    14100 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0109
+U 1 1 5E09D733
+P 14450 6450
+F 0 "#PWR0109" H 14450 6200 50  0001 C CNN
+F 1 "0V" H 14455 6277 50  0000 C CNN
+F 2 "" H 14450 6450 50  0001 C CNN
+F 3 "" H 14450 6450 50  0001 C CNN
+	1    14450 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14450 6450 14450 6300
+Wire Wire Line
+	14100 6300 14100 6450
+$Comp
+L 00-cool_stuff:resistor R23
+U 1 1 5E0A2B63
+P 14750 5850
+F 0 "R23" H 14650 5645 50  0000 C CNN
+F 1 "56k" H 14650 5736 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 14660 5890 50  0001 C CNN
+F 3 "~" V 14650 5850 50  0001 C CNN
+	1    14750 5850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	14700 5850 14450 5850
+Connection ~ 14450 5850
+$Comp
+L 00-cool_stuff:cap_small C19
+U 1 1 5E0A5AE3
+P 15150 6100
+F 0 "C19" V 15196 6008 50  0000 R CNN
+F 1 "4n7" V 15105 6008 50  0000 R CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 15150 6100 50  0001 C CNN
+F 3 "~" V 15150 6100 50  0001 C CNN
+	1    15150 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0110
+U 1 1 5E0A6069
+P 15150 6450
+F 0 "#PWR0110" H 15150 6200 50  0001 C CNN
+F 1 "0V" H 15155 6277 50  0000 C CNN
+F 2 "" H 15150 6450 50  0001 C CNN
+F 3 "" H 15150 6450 50  0001 C CNN
+	1    15150 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15150 6450 15150 6200
+Wire Wire Line
+	15150 6000 15150 5850
+Wire Wire Line
+	15150 5850 15000 5850
+$Comp
+L 00-cool_stuff:resistor R24
+U 1 1 5E0ABF66
+P 16050 6000
+F 0 "R24" V 15996 5932 50  0000 R CNN
+F 1 "82k" V 15905 5932 50  0000 R CNN
+F 2 "00-Mine:resistor-TH-10mm" H 15960 6040 50  0001 C CNN
+F 3 "~" V 15950 6000 50  0001 C CNN
+	1    16050 6000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:potentiometer RV4
+U 1 1 5E0AD37A
+P 16050 6900
+F 0 "RV4" H 15982 6991 50  0000 R CNN
+F 1 "A100k" H 15982 6900 50  0000 R CNN
+F 2 "" H 16050 6900 50  0001 C CNN
+F 3 "~" H 16050 6900 50  0001 C CNN
+F 4 "Bass" H 15982 6809 50  0000 R CNN "Label"
+	1    16050 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16050 5950 16050 5850
+Wire Wire Line
+	16050 5850 15150 5850
+Connection ~ 15150 5850
+$Comp
+L 00-cool_stuff:cap_small C21
+U 1 1 5E0B1746
+P 16550 6600
+F 0 "C21" V 16596 6508 50  0000 R CNN
+F 1 "47n" V 16505 6508 50  0000 R CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 16550 6600 50  0001 C CNN
+F 3 "~" V 16550 6600 50  0001 C CNN
+	1    16550 6600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	16200 6900 16550 6900
+Wire Wire Line
+	16550 6900 16550 6700
+$Comp
+L 00-cool_stuff:resistor R28
+U 1 1 5E0B7A77
+P 17100 6900
+F 0 "R28" H 17000 7105 50  0000 C CNN
+F 1 "4k7" H 17000 7014 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 17010 6940 50  0001 C CNN
+F 3 "~" V 17000 6900 50  0001 C CNN
+	1    17100 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C22
+U 1 1 5E0BB80B
+P 16550 7200
+F 0 "C22" V 16596 7108 50  0000 R CNN
+F 1 "100n" V 16505 7108 50  0000 R CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 16550 7200 50  0001 C CNN
+F 3 "~" V 16550 7200 50  0001 C CNN
+	1    16550 7200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	16550 7100 16550 6900
+Connection ~ 16550 6900
+Wire Wire Line
+	16550 6900 16850 6900
+Wire Wire Line
+	16050 6250 16050 6350
+Wire Wire Line
+	16550 6500 16550 6350
+Wire Wire Line
+	16550 6350 16050 6350
+Connection ~ 16050 6350
+Wire Wire Line
+	16050 6350 16050 6750
+Wire Wire Line
+	16550 7300 16550 7400
+Wire Wire Line
+	16550 7400 16050 7400
+Wire Wire Line
+	16050 7400 16050 7050
+$Comp
+L 00-cool_stuff:resistor R30
+U 1 1 5E0CFCC9
+P 16050 7600
+F 0 "R30" V 15996 7532 50  0000 R CNN
+F 1 "2k" V 15905 7532 50  0000 R CNN
+F 2 "00-Mine:resistor-TH-10mm" H 15960 7640 50  0001 C CNN
+F 3 "~" V 15950 7600 50  0001 C CNN
+	1    16050 7600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0111
+U 1 1 5E0D046B
+P 16050 7950
+F 0 "#PWR0111" H 16050 7700 50  0001 C CNN
+F 1 "0V" H 16055 7777 50  0000 C CNN
+F 2 "" H 16050 7950 50  0001 C CNN
+F 3 "" H 16050 7950 50  0001 C CNN
+	1    16050 7950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16050 7950 16050 7850
+Wire Wire Line
+	16050 7550 16050 7400
+Connection ~ 16050 7400
+$Comp
+L 00-cool_stuff:potentiometer RV5
+U 1 1 5E0D74DF
+P 17700 6900
+F 0 "RV5" H 17632 6809 50  0000 R CNN
+F 1 "A50k" H 17632 6900 50  0000 R CNN
+F 2 "" H 17700 6900 50  0001 C CNN
+F 3 "~" H 17700 6900 50  0001 C CNN
+F 4 "Treble" H 17632 6991 50  0000 R CNN "Label"
+	1    17700 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C20
+U 1 1 5E0D872B
+P 17700 6450
+F 0 "C20" V 17746 6358 50  0000 R CNN
+F 1 "47n" V 17655 6358 50  0000 R CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 17700 6450 50  0001 C CNN
+F 3 "~" V 17700 6450 50  0001 C CNN
+	1    17700 6450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	17550 6900 17350 6900
+$Comp
+L 00-cool_stuff:cap_small C23
+U 1 1 5E0DC3B6
+P 17700 7350
+F 0 "C23" V 17746 7258 50  0000 R CNN
+F 1 "47n" V 17655 7258 50  0000 R CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 17700 7350 50  0001 C CNN
+F 3 "~" V 17700 7350 50  0001 C CNN
+	1    17700 7350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0112
+U 1 1 5E0DC8DB
+P 17700 7600
+F 0 "#PWR0112" H 17700 7350 50  0001 C CNN
+F 1 "0V" H 17705 7427 50  0000 C CNN
+F 2 "" H 17700 7600 50  0001 C CNN
+F 3 "" H 17700 7600 50  0001 C CNN
+	1    17700 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	17700 7600 17700 7450
+Wire Wire Line
+	17700 7250 17700 7050
+Wire Wire Line
+	17700 6750 17700 6550
+Wire Wire Line
+	17700 6350 17700 5850
+Wire Wire Line
+	17700 5850 16050 5850
+Connection ~ 16050 5850
+$Comp
+L 00-cool_stuff:resistor R16
+U 1 1 5E0EBF5B
+P 18450 5550
+F 0 "R16" H 18350 5755 50  0000 C CNN
+F 1 "100k" H 18350 5664 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 18360 5590 50  0001 C CNN
+F 3 "~" V 18350 5550 50  0001 C CNN
+	1    18450 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	18200 5550 17350 5550
+Wire Wire Line
+	17350 5550 17350 6900
+Connection ~ 17350 6900
+Wire Wire Line
+	17350 6900 17150 6900
+$Comp
+L 00-cool_stuff:cap_small C9
+U 1 1 5E0F0255
+P 18800 5550
+F 0 "C9" H 18800 5321 50  0000 C CNN
+F 1 "47n" H 18800 5412 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 18800 5550 50  0001 C CNN
+F 3 "~" V 18800 5550 50  0001 C CNN
+	1    18800 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R20
+U 1 1 5E0F09FD
+P 19100 5800
+F 0 "R20" V 18954 5868 50  0000 L CNN
+F 1 "470k" V 19045 5868 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 19010 5840 50  0001 C CNN
+F 3 "~" V 19000 5800 50  0001 C CNN
+	1    19100 5800
+	0    1    -1   0   
+$EndComp
+Text GLabel 19000 6300 0    50   Input ~ 0
+VREF_C
+Wire Wire Line
+	19000 6300 19100 6300
+Wire Wire Line
+	19100 6300 19100 6050
+Wire Wire Line
+	19100 5550 18900 5550
+Wire Wire Line
+	18700 5550 18500 5550
+$Comp
+L 00-cool_stuff:TL072-separate U2
+U 2 1 5E0FDB9D
+P 20150 5450
+F 0 "U2" H 20150 5817 50  0000 C CNN
+F 1 "TL072-separate" H 20150 5726 50  0000 C CNN
+F 2 "00-Mine:DIP-8" H 20150 5450 50  0001 C CNN
+F 3 "" H 20150 5450 50  0001 C CNN
+	2    20150 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	19100 5750 19100 5550
+Wire Wire Line
+	19100 5550 19850 5550
+Connection ~ 19100 5550
+$Comp
+L 00-cool_stuff:cap_small C5
+U 1 1 5E1122E8
+P 20150 4900
+F 0 "C5" H 20150 4671 50  0000 C CNN
+F 1 "2n2" H 20150 4762 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 20150 4900 50  0001 C CNN
+F 3 "~" V 20150 4900 50  0001 C CNN
+	1    20150 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R7
+U 1 1 5E112CDC
+P 19700 4450
+F 0 "R7" V 19646 4518 50  0000 L CNN
+F 1 "22k" V 19555 4518 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 19610 4490 50  0001 C CNN
+F 3 "~" V 19600 4450 50  0001 C CNN
+	1    19700 4450
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R6
+U 1 1 5E113788
+P 20250 4200
+F 0 "R6" H 20150 3995 50  0000 C CNN
+F 1 "22k" H 20150 4086 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 20160 4240 50  0001 C CNN
+F 3 "~" V 20150 4200 50  0001 C CNN
+	1    20250 4200
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	19700 4200 19700 4400
+$Comp
+L 00-cool_stuff:resistor R5
+U 1 1 5E1184AF
+P 19450 4200
+F 0 "R5" H 19350 3995 50  0000 C CNN
+F 1 "150k" H 19350 4086 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 19360 4240 50  0001 C CNN
+F 3 "~" V 19350 4200 50  0001 C CNN
+	1    19450 4200
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	19500 4200 19700 4200
+Connection ~ 19700 4200
+$Comp
+L 00-cool_stuff:0V #PWR0113
+U 1 1 5E11CD8D
+P 18700 4350
+F 0 "#PWR0113" H 18700 4100 50  0001 C CNN
+F 1 "0V" H 18705 4177 50  0000 C CNN
+F 2 "" H 18700 4350 50  0001 C CNN
+F 3 "" H 18700 4350 50  0001 C CNN
+	1    18700 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	19050 4200 19200 4200
+Wire Wire Line
+	19700 4200 20000 4200
+Wire Wire Line
+	19700 4700 19700 4900
+Wire Wire Line
+	19700 5350 19850 5350
+Wire Wire Line
+	20050 4900 19700 4900
+Connection ~ 19700 4900
+Wire Wire Line
+	19700 4900 19700 5350
+Wire Wire Line
+	20300 4200 20700 4200
+Wire Wire Line
+	20700 4200 20700 4900
+Wire Wire Line
+	20700 5450 20450 5450
+Wire Wire Line
+	20250 4900 20700 4900
+Connection ~ 20700 4900
+Wire Wire Line
+	20700 4900 20700 5450
+$Comp
+L 00-cool_stuff:cap_small C2
+U 1 1 5E13ECCC
+P 18950 4200
+F 0 "C2" H 18950 3971 50  0000 C CNN
+F 1 "220n" H 18950 4062 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 18950 4200 50  0001 C CNN
+F 3 "~" V 18950 4200 50  0001 C CNN
+	1    18950 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	18700 4350 18700 4200
+Wire Wire Line
+	18700 4200 18850 4200
+$Comp
+L 00-cool_stuff:potentiometer RV3
+U 1 1 5E144535
+P 21350 5450
+F 0 "RV3" V 21237 5450 50  0000 C CNN
+F 1 "B100k" V 21146 5450 50  0000 C CNN
+F 2 "" H 21350 5450 50  0001 C CNN
+F 3 "~" H 21350 5450 50  0001 C CNN
+F 4 "Mid" V 21055 5450 50  0000 C CNN "Label"
+	1    21350 5450
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C14
+U 1 1 5E1464B9
+P 20950 5900
+F 0 "C14" V 20996 5808 50  0000 R CNN
+F 1 "10n" V 20905 5808 50  0000 R CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 20950 5900 50  0001 C CNN
+F 3 "~" V 20950 5900 50  0001 C CNN
+	1    20950 5900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-cool_stuff:cap_small C15
+U 1 1 5E146B18
+P 21700 5900
+F 0 "C15" V 21746 5808 50  0000 R CNN
+F 1 "10n" V 21655 5808 50  0000 R CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 21700 5900 50  0001 C CNN
+F 3 "~" V 21700 5900 50  0001 C CNN
+	1    21700 5900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	21500 5450 21700 5450
+Wire Wire Line
+	21700 5450 21700 5800
+Wire Wire Line
+	21200 5450 20950 5450
+Connection ~ 20700 5450
+Wire Wire Line
+	20950 5450 20950 5800
+Connection ~ 20950 5450
+Wire Wire Line
+	20950 5450 20700 5450
+Wire Wire Line
+	20950 6000 20950 6200
+Wire Wire Line
+	20950 6200 21350 6200
+Wire Wire Line
+	21700 6200 21700 6000
+$Comp
+L 00-cool_stuff:resistor R27
+U 1 1 5E15C51E
+P 21350 6350
+F 0 "R27" V 21296 6418 50  0000 L CNN
+F 1 "10k" V 21205 6418 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 21260 6390 50  0001 C CNN
+F 3 "~" V 21250 6350 50  0001 C CNN
+	1    21350 6350
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	21350 6300 21350 6200
+Connection ~ 21350 6200
+Wire Wire Line
+	21350 6200 21700 6200
+$Comp
+L 00-cool_stuff:0V #PWR0114
+U 1 1 5E162533
+P 21350 6700
+F 0 "#PWR0114" H 21350 6450 50  0001 C CNN
+F 1 "0V" H 21355 6527 50  0000 C CNN
+F 2 "" H 21350 6700 50  0001 C CNN
+F 3 "" H 21350 6700 50  0001 C CNN
+	1    21350 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	21350 6700 21350 6600
+$Comp
+L 00-cool_stuff:TL072-separate U1
+U 2 1 5E16859D
+P 22350 4900
+F 0 "U1" H 22350 5267 50  0000 C CNN
+F 1 "TL072-separate" H 22350 5176 50  0000 C CNN
+F 2 "00-Mine:DIP-8" H 22350 4900 50  0001 C CNN
+F 3 "" H 22350 4900 50  0001 C CNN
+	2    22350 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	22050 5000 21350 5000
+Wire Wire Line
+	21350 5000 21350 5300
+$Comp
+L 00-cool_stuff:cap_small C3
+U 1 1 5E16F7EE
+P 22350 4350
+F 0 "C3" H 22350 4579 50  0000 C CNN
+F 1 "100p" H 22350 4488 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 22350 4350 50  0001 C CNN
+F 3 "~" V 22350 4350 50  0001 C CNN
+	1    22350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R2
+U 1 1 5E1701A6
+P 22450 3900
+F 0 "R2" H 22350 3695 50  0000 C CNN
+F 1 "470k" H 22350 3786 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 22360 3940 50  0001 C CNN
+F 3 "~" V 22350 3900 50  0001 C CNN
+	1    22450 3900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	22200 3900 21900 3900
+Wire Wire Line
+	21900 3900 21900 4350
+Wire Wire Line
+	21900 4800 22050 4800
+Wire Wire Line
+	22500 3900 22800 3900
+Wire Wire Line
+	22800 3900 22800 4350
+Wire Wire Line
+	22800 4900 22650 4900
+Wire Wire Line
+	22450 4350 22800 4350
+Connection ~ 22800 4350
+Wire Wire Line
+	22800 4350 22800 4900
+Wire Wire Line
+	22250 4350 21900 4350
+Connection ~ 21900 4350
+Wire Wire Line
+	21900 4350 21900 4800
+$Comp
+L 00-cool_stuff:resistor R1
+U 1 1 5E18990E
+P 21700 3900
+F 0 "R1" H 21600 3695 50  0000 C CNN
+F 1 "10k" H 21600 3786 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 21610 3940 50  0001 C CNN
+F 3 "~" V 21600 3900 50  0001 C CNN
+	1    21700 3900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	21750 3900 21900 3900
+Connection ~ 21900 3900
+Text GLabel 21300 3900 0    50   Input ~ 0
+VREF_C
+Wire Wire Line
+	21300 3900 21450 3900
+$Comp
+L 00-cool_stuff:cap_small C6
+U 1 1 5E197FBA
+P 23100 4900
+F 0 "C6" H 23100 5129 50  0000 C CNN
+F 1 "220n" H 23100 5038 50  0000 C CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 23100 4900 50  0001 C CNN
+F 3 "~" V 23100 4900 50  0001 C CNN
+	1    23100 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R10
+U 1 1 5E1983B9
+P 23600 4900
+F 0 "R10" H 23500 4695 50  0000 C CNN
+F 1 "2k" H 23500 4786 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 23510 4940 50  0001 C CNN
+F 3 "~" V 23500 4900 50  0001 C CNN
+	1    23600 4900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	23350 4900 23200 4900
+Wire Wire Line
+	23000 4900 22800 4900
+Connection ~ 22800 4900
+$Comp
+L 00-cool_stuff:potentiometer RV2
+U 1 1 5E1A6549
+P 23950 5300
+F 0 "RV2" H 23883 5209 50  0000 R CNN
+F 1 "A50k" H 23883 5300 50  0000 R CNN
+F 2 "" H 23950 5300 50  0001 C CNN
+F 3 "~" H 23950 5300 50  0001 C CNN
+F 4 "Volume" H 23883 5391 50  0000 R CNN "Label"
+	1    23950 5300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	23950 5150 23950 4900
+Wire Wire Line
+	23950 4900 23650 4900
+$Comp
+L 00-cool_stuff:0V #PWR0115
+U 1 1 5E1AE4C4
+P 23950 5600
+F 0 "#PWR0115" H 23950 5350 50  0001 C CNN
+F 1 "0V" H 23955 5427 50  0000 C CNN
+F 2 "" H 23950 5600 50  0001 C CNN
+F 3 "" H 23950 5600 50  0001 C CNN
+	1    23950 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	23950 5600 23950 5450
+Text GLabel 24500 5300 2    50   Input ~ 0
+SIGNAL_OUT
+Wire Wire Line
+	24500 5300 24100 5300
+$Comp
+L 00-cool_stuff:power-barrel-jack J1
+U 1 1 5E1C5121
+P 2550 7350
+F 0 "J1" H 2632 7681 50  0000 C CNN
+F 1 "power-barrel-jack" H 2632 7590 50  0000 C CNN
+F 2 "" H 2550 7350 50  0001 C CNN
+F 3 "~" H 2550 7350 50  0001 C CNN
+	1    2550 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:schottky-diode D7
+U 1 1 5E1C6F78
+P 3400 7200
+F 0 "D7" H 3400 7416 50  0000 C CNN
+F 1 "schottky-diode" H 3400 7325 50  0000 C CNN
+F 2 "00-Mine:diode-TH" H 3400 7200 50  0001 C CNN
+F 3 "" H 3400 7200 50  0001 C CNN
+	1    3400 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-cool_stuff:0V #PWR0116
+U 1 1 5E1C7DF6
+P 2850 7600
+F 0 "#PWR0116" H 2850 7350 50  0001 C CNN
+F 1 "0V" H 2855 7427 50  0000 C CNN
+F 2 "" H 2850 7600 50  0001 C CNN
+F 3 "" H 2850 7600 50  0001 C CNN
+	1    2850 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 7600 2850 7500
+Wire Wire Line
+	2850 7500 2750 7500
+Wire Wire Line
+	3250 7200 2750 7200
+$Comp
+L 00-cool_stuff:resistor R29
+U 1 1 5E1D791C
+P 4000 7200
+F 0 "R29" H 3900 7405 50  0000 C CNN
+F 1 "10R" H 3900 7314 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 3910 7240 50  0001 C CNN
+F 3 "~" V 3900 7200 50  0001 C CNN
+	1    4000 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 7200 3550 7200
+$Comp
+L 00-cool_stuff:cap_polarized_small C24
+U 1 1 5E1E0AE6
+P 4200 7550
+F 0 "C24" H 4291 7596 50  0000 L CNN
+F 1 "100u" H 4291 7505 50  0000 L CNN
+F 2 "" H 4200 7550 50  0001 C CNN
+F 3 "~" H 4200 7550 50  0001 C CNN
+	1    4200 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 7450 4200 7200
+Wire Wire Line
+	4200 7200 4050 7200
+$Comp
+L 00-cool_stuff:0V #PWR0117
+U 1 1 5E1E9CB5
+P 4200 7750
+F 0 "#PWR0117" H 4200 7500 50  0001 C CNN
+F 1 "0V" H 4205 7577 50  0000 C CNN
+F 2 "" H 4200 7750 50  0001 C CNN
+F 3 "" H 4200 7750 50  0001 C CNN
+	1    4200 7750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 7750 4200 7650
+$Comp
+L 00-cool_stuff:resistor R31
+U 1 1 5E1F29B4
+P 4800 7650
+F 0 "R31" V 4654 7718 50  0000 L CNN
+F 1 "20k" V 4745 7718 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4710 7690 50  0001 C CNN
+F 3 "~" V 4700 7650 50  0001 C CNN
+	1    4800 7650
+	0    1    1    0   
+$EndComp
+$Comp
+L 00-cool_stuff:resistor R33
+U 1 1 5E1F358B
+P 4800 8150
+F 0 "R33" V 4654 8218 50  0000 L CNN
+F 1 "20k" V 4745 8218 50  0000 L CNN
+F 2 "00-Mine:resistor-TH-10mm" H 4710 8190 50  0001 C CNN
+F 3 "~" V 4700 8150 50  0001 C CNN
+	1    4800 8150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4800 7400 4800 7200
+Wire Wire Line
+	4800 7200 4200 7200
+Connection ~ 4200 7200
+$Comp
+L 00-cool_stuff:+9V #PWR0118
+U 1 1 5E1FDD61
+P 4800 7000
+F 0 "#PWR0118" H 4800 6850 50  0001 C CNN
+F 1 "+9V" H 4815 7173 50  0000 C CNN
+F 2 "" H 4800 7000 50  0001 C CNN
+F 3 "" H 4800 7000 50  0001 C CNN
+	1    4800 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 7000 4800 7200
+Connection ~ 4800 7200
+$Comp
+L 00-cool_stuff:0V #PWR0119
+U 1 1 5E206B27
+P 4800 8300
+F 0 "#PWR0119" H 4800 8050 50  0001 C CNN
+F 1 "0V" H 4805 8127 50  0000 C CNN
+F 2 "" H 4800 8300 50  0001 C CNN
+F 3 "" H 4800 8300 50  0001 C CNN
+	1    4800 8300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 8300 4800 8200
+Wire Wire Line
+	4800 7700 4800 7800
+$Comp
+L 00-cool_stuff:cap_small C25
+U 1 1 5E2184C0
+P 5250 8050
+F 0 "C25" V 5204 8142 50  0000 L CNN
+F 1 "100n" V 5295 8142 50  0000 L CNN
+F 2 "00-Mine:capacitor-TH-2.54mm_5mm" V 5250 8050 50  0001 C CNN
+F 3 "~" V 5250 8050 50  0001 C CNN
+	1    5250 8050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 7950 5250 7800
+Wire Wire Line
+	5250 7800 4800 7800
+Connection ~ 4800 7800
+Wire Wire Line
+	4800 7800 4800 7900
+$Comp
+L 00-cool_stuff:0V #PWR0120
+U 1 1 5E222068
+P 5250 8300
+F 0 "#PWR0120" H 5250 8050 50  0001 C CNN
+F 1 "0V" H 5255 8127 50  0000 C CNN
+F 2 "" H 5250 8300 50  0001 C CNN
+F 3 "" H 5250 8300 50  0001 C CNN
+	1    5250 8300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 8300 5250 8150
+$Comp
+L 00-cool_stuff:cap_polarized_small C26
+U 1 1 5E22B927
+P 5700 8050
+F 0 "C26" H 5791 8096 50  0000 L CNN
+F 1 "22u" H 5791 8005 50  0000 L CNN
+F 2 "" H 5700 8050 50  0001 C CNN
+F 3 "~" H 5700 8050 50  0001 C CNN
+	1    5700 8050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 7950 5700 7800
+Wire Wire Line
+	5700 7800 5250 7800
+Connection ~ 5250 7800
+$Comp
+L 00-cool_stuff:0V #PWR0121
+U 1 1 5E235934
+P 5700 8300
+F 0 "#PWR0121" H 5700 8050 50  0001 C CNN
+F 1 "0V" H 5705 8127 50  0000 C CNN
+F 2 "" H 5700 8300 50  0001 C CNN
+F 3 "" H 5700 8300 50  0001 C CNN
+	1    5700 8300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 8300 5700 8150
+$Comp
+L 00-cool_stuff:+4.5V #PWR0122
+U 1 1 5E23F7E4
+P 5250 7600
+F 0 "#PWR0122" H 5250 7450 50  0001 C CNN
+F 1 "+4.5V" H 5265 7773 50  0000 C CNN
+F 2 "" H 5250 7600 50  0001 C CNN
+F 3 "" H 5250 7600 50  0001 C CNN
+	1    5250 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 7600 5250 7800
+$Comp
+L 00-cool_stuff:TL072-separate U2
+U 1 1 5E249AF3
+P 7200 7700
+F 0 "U2" H 7200 8067 50  0000 C CNN
+F 1 "TL072-separate" H 7200 7976 50  0000 C CNN
+F 2 "00-Mine:DIP-8" H 7200 7700 50  0001 C CNN
+F 3 "" H 7200 7700 50  0001 C CNN
+	1    7200 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 7700 7650 7700
+Wire Wire Line
+	7650 7700 7650 7250
+Wire Wire Line
+	7650 7250 6800 7250
+Wire Wire Line
+	6800 7250 6800 7600
+Wire Wire Line
+	6800 7600 6900 7600
+$Comp
+L 00-cool_stuff:resistor R32
+U 1 1 5E255E7A
+P 6450 7800
+F 0 "R32" H 6350 7595 50  0000 C CNN
+F 1 "1k5" H 6350 7686 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 6360 7840 50  0001 C CNN
+F 3 "~" V 6350 7800 50  0001 C CNN
+	1    6450 7800
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00-cool_stuff:TL072-separate U3
+U 1 1 5E26E5EB
+P 7200 8550
+F 0 "U3" H 7200 8917 50  0000 C CNN
+F 1 "TL072-separate" H 7200 8826 50  0000 C CNN
+F 2 "00-Mine:DIP-8" H 7200 8550 50  0001 C CNN
+F 3 "" H 7200 8550 50  0001 C CNN
+	1    7200 8550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 8550 7650 8550
+Wire Wire Line
+	7650 8550 7650 8100
+Wire Wire Line
+	7650 8100 6800 8100
+Wire Wire Line
+	6800 8100 6800 8450
+Wire Wire Line
+	6800 8450 6900 8450
+$Comp
+L 00-cool_stuff:resistor R34
+U 1 1 5E26E5F6
+P 6450 8650
+F 0 "R34" H 6350 8445 50  0000 C CNN
+F 1 "1k5" H 6350 8536 50  0000 C CNN
+F 2 "00-Mine:resistor-TH-10mm" H 6360 8690 50  0001 C CNN
+F 3 "~" V 6350 8650 50  0001 C CNN
+	1    6450 8650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6700 7800 6900 7800
+Wire Wire Line
+	6700 8650 6900 8650
+Wire Wire Line
+	6400 7800 6200 7800
+Connection ~ 5700 7800
+Wire Wire Line
+	6200 7800 6200 8650
+Wire Wire Line
+	6200 8650 6400 8650
+Connection ~ 6200 7800
+Wire Wire Line
+	6200 7800 5700 7800
+Text GLabel 8100 7700 2    50   Input ~ 0
+VREF_B
+Connection ~ 7650 7700
+Text GLabel 8100 8550 2    50   Input ~ 0
+VREF_C
+Connection ~ 7650 8550
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5E2CDCCB
+P 4200 7200
+F 0 "#FLG0104" H 4200 7275 50  0001 C CNN
+F 1 "PWR_FLAG" H 4200 7373 50  0000 C CNN
+F 2 "" H 4200 7200 50  0001 C CNN
+F 3 "~" H 4200 7200 50  0001 C CNN
+	1    4200 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0105
+U 1 1 5E2CE526
+P 2850 7500
+F 0 "#FLG0105" H 2850 7575 50  0001 C CNN
+F 1 "PWR_FLAG" H 2850 7673 50  0000 C CNN
+F 2 "" H 2850 7500 50  0001 C CNN
+F 3 "~" H 2850 7500 50  0001 C CNN
+	1    2850 7500
+	1    0    0    -1  
+$EndComp
+Connection ~ 2850 7500
+Wire Wire Line
+	7650 7700 8100 7700
+Wire Wire Line
+	7650 8550 8100 8550
+Text GLabel 2650 9400 2    50   Input ~ 0
+SIGNAL_IN
+Text GLabel 3900 9400 0    50   Input ~ 0
+SIGNAL_OUT
+$Comp
+L Connector:AudioJack2 J2
+U 1 1 5E2D02DC
+P 2100 9400
+F 0 "J2" H 1921 9383 50  0000 R CNN
+F 1 "AudioJack2" H 1921 9474 50  0000 R CNN
+F 2 "" H 2100 9400 50  0001 C CNN
+F 3 "~" H 2100 9400 50  0001 C CNN
+	1    2100 9400
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack2 J3
+U 1 1 5E2D1011
+P 4450 9400
+F 0 "J3" H 4270 9383 50  0000 R CNN
+F 1 "AudioJack2" H 4270 9474 50  0000 R CNN
+F 2 "" H 4450 9400 50  0001 C CNN
+F 3 "~" H 4450 9400 50  0001 C CNN
+	1    4450 9400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2650 9400 2300 9400
+$Comp
+L 00-cool_stuff:0V #PWR0123
+U 1 1 5E2DEAC3
+P 2400 9600
+F 0 "#PWR0123" H 2400 9350 50  0001 C CNN
+F 1 "0V" H 2405 9427 50  0000 C CNN
+F 2 "" H 2400 9600 50  0001 C CNN
+F 3 "" H 2400 9600 50  0001 C CNN
+	1    2400 9600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 9600 2400 9500
+Wire Wire Line
+	2400 9500 2300 9500
+Wire Wire Line
+	4250 9400 3900 9400
+$Comp
+L 00-cool_stuff:0V #PWR0124
+U 1 1 5E2F9271
+P 4150 9600
+F 0 "#PWR0124" H 4150 9350 50  0001 C CNN
+F 1 "0V" H 4155 9427 50  0000 C CNN
+F 2 "" H 4150 9600 50  0001 C CNN
+F 3 "" H 4150 9600 50  0001 C CNN
+	1    4150 9600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 9600 4150 9500
+Wire Wire Line
+	4150 9500 4250 9500
+$EndSCHEMATC

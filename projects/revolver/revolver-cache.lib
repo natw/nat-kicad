@@ -1,0 +1,310 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# 00-cool_stuff_+4.5V
+#
+DEF 00-cool_stuff_+4.5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "00-cool_stuff_+4.5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +9V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_+9V
+#
+DEF 00-cool_stuff_+9V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "00-cool_stuff_+9V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +9V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_0V
+#
+DEF 00-cool_stuff_0V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "00-cool_stuff_0V" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_TL072-separate
+#
+DEF 00-cool_stuff_TL072-separate U 0 4 Y Y 3 L N
+F0 "U" 0 200 50 H V L CNN
+F1 "00-cool_stuff_TL072-separate" 0 -200 50 H V L CNN
+F2 "00-Mine:DIP-8" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS TL082-sep NJM2068-sep
+$FPLIST
+ SOIC*Pitch1.27mm*
+ DIP*W7.62mm*
+ TSSOP*Pitch0.65mm*
+ TO-99*
+ DSBGA*
+$ENDFPLIST
+DRAW
+P 4 0 1 10 -200 200 200 0 -200 -200 -200 200 f
+X ~ 1 300 0 100 L 50 50 1 1 O
+X - 2 -300 100 100 R 50 50 1 1 I
+X + 3 -300 -100 100 R 50 50 1 1 I
+X + 5 -300 -100 100 R 50 50 2 1 I
+X - 6 -300 100 100 R 50 50 2 1 I
+X ~ 7 300 0 100 L 50 50 2 1 O
+X V- 4 -100 -250 100 U 50 50 3 1 W
+X V+ 8 -100 250 100 D 50 50 3 1 W
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_cap_polarized_small
+#
+DEF 00-cool_stuff_cap_polarized_small C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "00-cool_stuff_cap_polarized_small" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ CP_*
+$ENDFPLIST
+DRAW
+A 0 -140 125 1186 614 0 1 12 N -60 -30 60 -30
+P 2 0 1 12 -60 20 60 20 N
+P 2 0 1 0 -50 60 -30 60 N
+P 2 0 1 0 -40 50 -40 70 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_cap_small
+#
+DEF 00-cool_stuff_cap_small C 0 10 N N 1 F N
+F0 "C" -50 100 50 H V L CNN
+F1 "00-cool_stuff_cap_small" -150 -100 50 H V L CNN
+F2 "00-Mine:capacitor-TH-2.54mm_5mm" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 12 -20 -60 -20 60 N
+P 2 0 1 13 20 -60 20 60 N
+X ~ 1 -100 0 80 R 50 50 1 1 P
+X ~ 2 100 0 80 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_diode2
+#
+DEF 00-cool_stuff_diode2 D 0 0 N N 1 F N
+F0 "D" 0 100 60 H V C BNN
+F1 "00-cool_stuff_diode2" 0 -100 60 H V C CNN
+F2 "digikey-footprints:SOD-123" 200 200 60 H I L CNN
+F3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" 200 300 60 H I L CNN
+F4 "1N4148W-FDICT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "1N4148W-7-F" 200 500 60 H I L CNN "MPN"
+F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
+F7 "Diodes - Rectifiers - Single" 200 700 60 H I L CNN "Family"
+F8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "DIODE GEN PURP 100V 300MA SOD123" 200 1000 60 H I L CNN "Description"
+F11 "Diodes Incorporated" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+P 2 0 1 0 50 50 50 -50 N
+P 4 0 1 0 -50 50 -50 -50 50 0 -50 50 F
+X A A -200 0 150 R 50 50 1 1 P
+X K K 200 0 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_potentiometer
+#
+DEF 00-cool_stuff_potentiometer RV 0 40 Y N 1 F N
+F0 "RV" -175 0 50 V V C CNN
+F1 "00-cool_stuff_potentiometer" -100 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "Pot Label" 450 0 50 V V C CNN "Label"
+$FPLIST
+ Potentiometer*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 0 -90 0 -100 N
+P 2 0 1 0 0 100 0 90 N
+P 2 0 1 0 100 0 60 0 N
+P 4 0 1 0 45 0 90 20 90 -20 45 0 F
+P 5 0 1 0 0 -30 40 -45 0 -60 -40 -75 0 -90 N
+P 5 0 1 0 0 30 40 15 0 0 -40 -15 0 -30 N
+P 5 0 1 0 0 90 40 75 0 60 -40 45 0 30 N
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
+X 3 3 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_power-barrel-jack
+#
+DEF 00-cool_stuff_power-barrel-jack J 0 40 Y N 1 F N
+F0 "J" -200 -50 50 H V C CNN
+F1 "00-cool_stuff_power-barrel-jack" 0 -250 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *BNC*
+ *SMA*
+ *SMB*
+ *SMC*
+ *Cinch*
+$ENDFPLIST
+DRAW
+A 0 0 50 369 0 0 1 10 N 40 30 50 0
+A 0 0 50 1800 1431 0 1 10 N -50 0 -40 30
+A 0 0 50 -1799 -1 0 1 10 N -50 0 50 0
+C 0 0 20 0 1 8 F
+S 0 -150 0 -50 0 1 0 N
+S 0 50 0 150 0 1 0 N
+S 0 150 100 150 0 1 0 N
+S 100 -150 0 -150 0 1 0 N
+P 2 0 1 0 0 -50 0 -70 N
+P 2 0 1 0 0 50 0 0 N
+X In 1 200 150 100 L 50 50 1 1 P
+X Ext 2 200 -150 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_resistor
+#
+DEF 00-cool_stuff_resistor R 0 0 N Y 1 F N
+F0 "R" -100 100 50 H V C CNN
+F1 "00-cool_stuff_resistor" -100 -100 50 H V C CNN
+F2 "00-Mine:resistor-TH-10mm" -90 40 50 H I C CNN
+F3 "" -100 0 50 V I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 -190 0 -200 0 N
+P 2 0 1 0 -10 0 0 0 N
+P 5 0 1 0 -190 0 -175 40 -160 0 -145 -40 -130 0 N
+P 5 0 1 0 -130 0 -115 40 -100 0 -85 -40 -70 0 N
+P 5 0 1 0 -70 0 -55 40 -40 0 -25 -40 -10 0 N
+X ~ 1 -250 0 50 R 50 50 1 1 P
+X ~ 2 50 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_schottky-diode
+#
+DEF 00-cool_stuff_schottky-diode D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "00-cool_stuff_schottky-diode" 0 -100 50 H V C CNN
+F2 "00-Mine:diode-TH" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *SingleDiode
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 -50 50 -50 -50 50 0 -50 50 N
+P 6 0 1 8 75 25 75 50 50 50 50 -50 25 -50 25 -25 N
+X K 1 150 0 100 L 50 50 1 1 P
+X A 2 -150 0 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# 00-cool_stuff_switch-spdt
+#
+DEF 00-cool_stuff_switch-spdt SW 0 0 Y N 1 F N
+F0 "SW" 0 170 50 H V C CNN
+F1 "00-cool_stuff_switch-spdt" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C -80 0 20 0 0 0 N
+C 80 -100 20 0 0 0 N
+C 80 100 20 0 1 0 N
+P 2 0 1 0 -60 10 65 90 N
+X A 1 200 100 100 L 50 50 1 1 P
+X B 2 -200 0 100 R 50 50 1 1 P
+X C 3 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_AudioJack2
+#
+DEF Connector_AudioJack2 J 0 20 Y Y 1 F N
+F0 "J" 0 350 50 H V C CNN
+F1 "Connector_AudioJack2" 0 250 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Jack*
+$ENDFPLIST
+DRAW
+S -150 0 -100 -100 0 1 10 F
+S -100 150 100 -100 0 1 10 f
+P 4 0 1 10 0 0 25 -25 50 0 100 0 N
+P 5 0 1 10 100 100 -25 100 -25 0 -50 -25 -75 0 N
+X ~ S 200 100 100 L 50 50 1 1 P
+X ~ T 200 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_LED
+#
+DEF Device_LED D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device_LED" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_PWR_FLAG
+#
+DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "power_PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+#End Library

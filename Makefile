@@ -1,4 +1,5 @@
 FOOTPRINT_DIRS := $(shell find . -type d -name *.pretty | grep -vi example)
+
 SYMBOL_FILES := $(shell find . -type f -name *.lib | grep -vi example)
 
 default: fp-lib-table sym-lib-table
@@ -17,8 +18,8 @@ $(FOOTPRINT_DIRS): update
 $(SYMBOL_FILES): update
 
 clean:
-	rm fp-lib-table
-	rm sym-lib-table
+	rm -f fp-lib-table
+	rm -f sym-lib-table
 
 update:
 	git submodule update --recursive --remote

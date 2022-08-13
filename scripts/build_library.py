@@ -1,17 +1,45 @@
 #!/usr/bin/env python3
 
 import argparse
-from dataclasses import dataclass
-import itertools
-import re
-import os.path
 import glob
+import os.path
+import re
 import sys
-from typing import List
+from collections import defaultdict
+from dataclasses import dataclass
+from typing import Generator, List
+
+FOOTPRINT_BLACKLIST = [
+    "4ms-footprints",
+    "-legacy",
+    "obsolete",
+    "Example",
+    "src/",
+    "spice/",
+    "projects/",
+]
+SYMBOL_BLACKLIST = ["obsolete", "Example", "src/", "spice/", "projects/", "-legacy"]
 
 
-FOOTPRINT_BLACKLIST = ["4ms-footprints", "obsolete", "Example", "src/"]
-SYMBOL_BLACKLIST = ["obsolete", "Example", "src/"]
+def main():
+    args = do_args_stuff()
+
+    if args.kind == "footprint":
+        target_list = find_footprints()
+        root = "fp_lib_table"
+    elif args.kind == "symbol":
+        target_list = find_symbols()
+        root = "sym_lib_table"
+    else:
+        print("wut")
+        sys.exit(1)
+
+    existing: List[TableEntry] = list(parse_existing_table(args.table))
+    new_ones: List[TableEntry] = repo_entries(target_list)
+    libs = merge_tables(existing, new_ones)
+    libs = fix_duplicate_names(libs)
+
+    print(f"({root}\n  " + "\n  ".join(te.to_line() for te in libs) + "\n)")
 
 
 def escape(thing):
@@ -43,10 +71,10 @@ class TableEntry:
         del attrs["type"]
         # setting these as defaults on the dataclass just gets them
         # overwritten by the empty string from the parsed sexp
-        if not attrs["options"]:
-            attrs["options"] = '""'
-        if not attrs["descr"]:
-            attrs["descr"] = '""'
+        # if not attrs["options"]:
+        #     attrs["options"] = '""'
+        # if not attrs["descr"]:
+        #     attrs["descr"] = '""'
         # print(attrs)
         return TableEntry(**attrs)
 
@@ -56,39 +84,17 @@ class TableEntry:
             dis = "(disabled)"
         return (
             f"(lib "
-            f"(name {self.name})"
-            f"(type {self._type})"
-            f"(uri {escape(self.uri)})"
-            f"(options {self.options})"
-            f"(descr {self.descr})"
+            f'(name "{self.name}")'
+            f'(type "{self._type}")'
+            f'(uri "{escape(self.uri)}")'
+            f'(options "{self.options}")'
+            f'(descr "{self.descr}")'
             f"{dis})"
         )
 
 
-def main():
-    args = do_args_stuff()
-
-    if args.kind == "footprint":
-        target_list = find_footprints()
-        lib_type = "KiCad"
-        root = "fp_lib_table"
-    elif args.kind == "symbol":
-        target_list = find_symbols()
-        lib_type = "Legacy"
-        root = "sym_lib_table"
-    else:
-        print("wut")
-        sys.exit(1)
-
-    existing: List[TableEntry] = list(parse_existing_table(args.table))
-    new_ones: List[TableEntry] = repo_entries(target_list, lib_type)
-    libs = merge_tables(existing, new_ones)
-
-    print(f"({root}\n  " + "\n  ".join(te.to_line() for te in libs) + "\n)")
-
-
 def merge_tables(existing, from_repos):
-    existing_names = [l.name for l in existing]
+    existing_names = [line.name for line in existing]
     ex = list(existing)
     for lib in from_repos:
         if lib.name not in existing_names:
@@ -96,33 +102,49 @@ def merge_tables(existing, from_repos):
     return ex
 
 
-def repo_entries(paths, lib_type):
+def fix_duplicate_names(libs):
+    counts = defaultdict(int)
+    for lib in libs:
+        name = lib.name
+        if counts[name] > 0:
+            lib.name = f"{name}-{counts[name]}"
+        counts[name] += 1
+    return libs
+
+
+def repo_entries(paths):
     for path in paths:
         uri = "${CONFIG_CHECKOUT}/" + path
-        name = os.path.splitext(os.path.basename(path))[0]
-        yield TableEntry(name=name, _type=lib_type, uri=uri, options='""', descr='""')
+        name, ext = os.path.splitext(os.path.basename(path))
+        lib_type = "KiCad"
+        if ext == ".lib":
+            lib_type = "Legacy"
+        yield TableEntry(name=name, _type=lib_type, uri=uri, options="", descr="")
 
 
-def parse_existing_table(path: str) -> List[TableEntry]:
-    with open(path, "r") as table_file:
-        for line in table_file.readlines()[1:-1]:
-            if not line.strip().startswith("#"):
-                entry = TableEntry.from_line(line)
-                if entry:
-                    yield entry
+def parse_existing_table(path: str) -> Generator[TableEntry, None, None]:
+    try:
+        with open(path, "r") as table_file:
+            for line in table_file.readlines()[1:-1]:
+                if not line.strip().startswith("#"):
+                    entry = TableEntry.from_line(line)
+                    if entry:
+                        yield entry
+    except FileNotFoundError:
+        return
 
 
-def reconcile_tables(table: str, targets, root, lib_type):
-    def format_lib_line(target):
-        pth = "${CONFIG_CHECKOUT}/" + target
-        name = os.path.splitext(os.path.basename(target))[0]
-        return (
-            f'  (lib (name {name})(type {lib_type})(uri {pth})(options "")(descr ""))'
-        )
+# def reconcile_tables(table: str, targets, root, lib_type):
+#     def format_lib_line(target):
+#         pth = "${CONFIG_CHECKOUT}/" + target
+#         name = os.path.splitext(os.path.basename(target))[0]
+#         return (
+#             f'  (lib (name "{name}")(type "{lib_type}")(uri "{pth}")(options "")(descr ""))'
+#         )
 
-    return "\n".join(
-        itertools.chain([f"({root}"], map(format_lib_line, targets), [")"])
-    )
+#     return "\n".join(
+#         itertools.chain([f"({root}"], map(format_lib_line, targets), [")"])
+#     )
 
 
 def find_footprints():
@@ -136,7 +158,11 @@ def find_symbols():
     def good(path):
         return not any(ble in path for ble in SYMBOL_BLACKLIST)
 
-    return filter(good, glob.glob("**/*.lib", recursive=True))
+    return filter(
+        good,
+        glob.glob("**/*.kicad_sym", recursive=True)
+        + glob.glob("**/*.lib", recursive=True),
+    )
 
 
 def do_args_stuff():
